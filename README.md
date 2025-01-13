@@ -1,12 +1,19 @@
 # CV4EM
-This is the repository for making a library with integrated modules developed by CV4EM team
-The package contains a few modules like the following:
-CVEM/
-├── data/
-│   ├── __init__.py
-│   └── K_factor.py
-│   └── Periodical_table.py
-│── module/
-│── utils/
-│
-├── __init__.py
+
+This is the repository for a library with integrated modules developed by the **CV4EM team**.
+
+---
+
+## Prerequisites
+
+Make sure you have the following libraries installed:
+
+- `pandas`
+- `numpy`
+- `hyperspy`
+- `exspy`
+
+You can install these dependencies using pip:
+
+```bash
+pip install pandas numpy hyperspy exspy
