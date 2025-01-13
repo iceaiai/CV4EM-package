@@ -1,0 +1,12 @@
+name: cv4em-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pandas>=1.0
+  - numpy>=1.18
+  - hyperspy
+  - pip
+  - pip:
+      - exspy

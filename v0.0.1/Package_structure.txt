@@ -1,0 +1,12 @@
+CV4EM/
+├── data/
+│   ├── __init__.py
+│   ├── K_factor.py
+│   └── Periodical_table.py
+├── module/
+│   ├── __init__.py
+│   └── # Add your module files here
+├── utils/
+│   ├── __init__.py
+│   └── # Add utility files here
+├── __init__.py want to show this in readme
