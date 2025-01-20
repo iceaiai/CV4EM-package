@@ -8,6 +8,21 @@ import pandas as pd
 import numpy as np
 import copy
 class kfactors:
+     """
+    A class to store and retrieve k-factors for elements based on their X-ray lines (K, L, M).
+    The k-factors are specific to the Bruker EDS detector equipped in the Hitachi HD2700 STEM.
+
+    Attributes:
+        column (list): Column names for the k-factor data (Z, Element, K, L, M).
+        data (list): A list of lists containing k-factor data for elements.
+        kfactors_HD2700 (pd.DataFrame): A DataFrame storing the k-factor data.
+
+    Methods:
+        find_kfactors(x_rayline_list, index='Element'):
+            Retrieves k-factors for the given X-ray lines. Can accept a list of X-ray lines
+            or a HyperSpy EDS spectrum as input.
+    """
+    
     def __init__(self): #initializes the class and sets up the data
         self.column = ['Z', 'Element', 'K','L','M'] # defines the structure of the data table. It has column for: Z: Atomic number of the element. Element: Name of the element. K, L, M: K-factors for the K, L, M X-ray lines of each element.
         self.data = [
