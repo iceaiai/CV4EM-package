@@ -8,8 +8,8 @@ import pandas as pd
 import numpy as np
 import copy
 class kfactors:
-    def __init__(self):
-        self.column = ['Z', 'Element', 'K','L','M'] # format of the data
+    def __init__(self): #initializes the class and sets up the data
+        self.column = ['Z', 'Element', 'K','L','M'] # defines the structure of the data table. It has column for: Z: Atomic number of the element. Element: Name of the element. K, L, M: K-factors for the K, L, M X-ray lines of each element.
         self.data = [
                         [1, 'H', 0, 0, 0],[2, 'He', 0, 0, 0],[3, 'Li', 0, 0, 0],[4, 'Be', 181.983, 0, 0],[5, 'B', 8.985, 0, 0],
                         [6, 'C', 11.907, 0, 0], [7, 'N', 3.218, 0, 0],[8, 'O', 1.700, 0, 0],[9, 'F', 1.503, 0, 0],[10, 'Ne', 0.966, 0, 0],
@@ -79,37 +79,36 @@ class kfactors:
                         [96, 'Cm', 98894.698, 9.382, 3.032],
                         [97, 'Bk', 15703.642, 9.892, 3.018],
                         [98, 'Cf', 37892.321, 10.560, 3.050]
-                    ]
-        self.kfactors_HD2700 = pd.DataFrame(data = data,df=None, columns = column)
-    def find_kfactors(self,x_rayline_list, index='Element'):
+                    ] #List  containing the k-factors data for each element.
+        self.kfactors_HD2700 = pd.DataFrame(data = data,df=None, columns = column) #Converts the self.data list into a Pandas DataFrame for easier manipulatioon and searching.
+    def find_kfactors(self,x_rayline_list, index='Element'): #This method retrieves the k-factors for a given list of X-ray lines.
         """
-        Find the k-factor for the given x-ray line list.
+        Find the k-factor for the given x-ray line list. Looks up the corresponding k-factor in the DataFrame.
         :param x_rayline_list: List of x-ray lines (e.g., ['Al_Ka', 'Zr_Ka'])
         :param df: DataFrame to search (defaults to self.kfactors_2700, might use our other facilities if vendor can provide their kfactors)
         :param index: Index column for searching (default is 'Element')
-        :return: List of k-factors
+        :return: List of k-factors. It returns a list of k-factors for the given X-ray lines.
         """
         
-        data_list = []
-        if df is None:
-            df = copy.deepcopy(self.kfactors_HD2700)
-        df.set_index(index, inplace=True)  # Set index to 'Element'
-        if isinstance(x_rayline_list, (list, np.ndarray)):
+        data_list = [] #To store the k-factors (values) retrieved for the given X-ray lines.
+        if df is None: #If no DataFrame is provided as input, the code ses a deep copy of the self.kfactors_HD2700 
+            df = copy.deepcopy(self.kfactors_HD2700) #copy.deepcopy ensures that the original DataFrame is not moodified accidentally.
+        df.set_index(index, inplace=True)  # Replaces the default numeric indices with the values from the 'Elemen' column
+        if isinstance(x_rayline_list, (list, np.ndarray)): #If it's a list or NumPy array => assign it directly to EDS_lines
             EDS_lines = x_rayline_list
 
-        elif isinstance(x_rayline_list, (exspy.signals.eds_tem.EDSTEMSpectrum,
+        elif isinstance(x_rayline_list, (exspy.signals.eds_tem.EDSTEMSpectrum, #If it's a special spectum object =>
                                 exspy.signals.eds_sem.EDSSEMSpectrum)):
             EDS_lines = x_rayline_list.metadata.Sample.xray_lines
         else:
             print (f"Please assign x-rayline_list values with a list format: [element1_K(or L or M)a','element2_K(or L or M)a'... ]")
-        for item in EDS_lines:
-            # Extract index and line
-            idx = item.split('_')[0]  # Extract index before underscore
-            line = item[-2]  # Extract last two characters as line
+        for item in EDS_lines: #This loop processes each X-ray line in the EDS_lines list.
+            idx = item.split('_')[0]  # Extracts the element name by splitting the string at the underscore. (Row)
+            line = item[-2]  # Extracts last two characters of the X-ray line string. (Column)
             # Access value from DataFrame
-            value = df.at[idx, line]
-            data_list.append(value)
-        return data_list
+            value = df.at[idx, line] #Retrieves a specific value (k-factor) using row (idx = Element name ) and column (line = X-ray line) labels.
+            data_list.append(value) #This retrieves k-factor(value) is added to the data_list.
+        return data_list #Returns a list of k-factors
 """
 Example usage:
 kfactor = kfactors()
