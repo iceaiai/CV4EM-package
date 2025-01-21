@@ -57,6 +57,26 @@ Attributes
 
 - `self.kfactors_HD2700`: A Pandas DataFrame storing the k-factor data.
 
+Methods
+
+`__init__()`
+Initializes the `kfactors` class and sets up the k-factor data.
+
+`find_kfactors(x_rayline_list, index='Element')`
+Retrieves the k-factors for the given X-ray lines.
+
+Parameters:
+
+- `x_rayline_list`: A list of X-ray lines (e.g., `['Al_Ka', 'Zr_Ka']`) or a HyperSpy `EDSTEMSpectrum`/`EDSSEMSpectrum` object.
+
+-`index`: The column to use for searching (default is `'Element'`).
+
+Returns:
+
+A list of k-factors corresponding to the requested X-ray lines.
+
+#### Examples 
+
 
 #### **`K_factor.py`**
 
