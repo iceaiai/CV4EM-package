@@ -48,7 +48,7 @@ To install the dependencies, run:
 ##### The `kfactors` Class
 The `kfactors` class is the core of the script. It organizes k-factor data and provides methods to retrieve k-factors for specific X-ray lines.
 
-Attributes
+_Attributes_
 - `self.column`: A list of column names in the k-factor data table.
 
     - Format: `['Z', 'Element', 'K', 'L', 'M']`
@@ -57,7 +57,7 @@ Attributes
 
 - `self.kfactors_HD2700`: A Pandas DataFrame storing the k-factor data.
 
-Methods
+_Methods_
 
 `__init__()`
 Initializes the `kfactors` class and sets up the k-factor data.
@@ -65,18 +65,30 @@ Initializes the `kfactors` class and sets up the k-factor data.
 `find_kfactors(x_rayline_list, index='Element')`
 Retrieves the k-factors for the given X-ray lines.
 
-Parameters:
+_Parameters_
 
 - `x_rayline_list`: A list of X-ray lines (e.g., `['Al_Ka', 'Zr_Ka']`) or a HyperSpy `EDSTEMSpectrum`/`EDSSEMSpectrum` object.
 
 -`index`: The column to use for searching (default is `'Element'`).
 
-Returns:
+_Returns_
 
 A list of k-factors corresponding to the requested X-ray lines.
 
 #### Examples 
 
+Using a List of X-ray Lines
+```python 
+from k_factor import kfactors
+
+# Initialize the kfactors class
+kfactor = kfactors()
+
+# Get k-factors for specific X-ray lines
+results = kfactor.find_kfactors(x_rayline_list=['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka'])
+print(results)  # Output: [11.011, 6.180, 1.700, 1.210]
+
+```
 
 #### **`K_factor.py`**
 
@@ -92,3 +104,4 @@ A list of k-factors corresponding to the requested X-ray lines.
 
 
 
+$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}]blank}$$
