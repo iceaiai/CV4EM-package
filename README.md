@@ -45,7 +45,7 @@ To install the dependencies, run:
 ```
 
 #### Usage
-##### The `kfactors` Class
+
 The `kfactors` class is the core of the script. It organizes k-factor data and provides methods to retrieve k-factors for specific X-ray lines.
 
 _Attributes_
