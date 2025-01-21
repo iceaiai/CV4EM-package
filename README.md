@@ -69,7 +69,7 @@ _Parameters_
 
 - `x_rayline_list`: A list of X-ray lines (e.g., `['Al_Ka', 'Zr_Ka']`) or a HyperSpy `EDSTEMSpectrum`/`EDSSEMSpectrum` object.
 
--`index`: The column to use for searching (default is `'Element'`).
+- `index`: The column to use for searching (default is `'Element'`).
 
 _Returns_
 
