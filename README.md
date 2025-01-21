@@ -20,11 +20,7 @@ You can install these dependencies using pip:
 
 ```
 
-###  Data Directory Documentation
-
----
-
-
+##  Data Directory Documentation
 
 The `data/` directory contains core modules for managing k-factors and periodic table data.
 
@@ -42,6 +38,6 @@ The `K_factor.py` module provides functionality to manage and retrieve k-factors
 - The `utils/` directory contains helper functions and utilities.
 - The top-level `__init__.py` initializes the `CV4EM` package, enabling imports like `from CV4EM import ...`.
 
----
+
 
 
