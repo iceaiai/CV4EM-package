@@ -15,10 +15,16 @@ Make sure you have the following libraries installed:
 
 You can install these dependencies using pip:
 
-```bash
-pip install pandas numpy hyperspy exspy
+```
+ pip install pandas numpy hyperspy exspy
 
-## **Data Directory Documentation**
+```
+
+###  Data Directory Documentation
+
+---
+
+
 
 The `data/` directory contains core modules for managing k-factors and periodic table data.
 
