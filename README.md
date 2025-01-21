@@ -104,4 +104,4 @@ print(results)  # Output: [11.011, 6.180, 1.700, 1.210]
 
 
 
-$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}]blank}$$
+$${\color{red}blank \space \color{lightblue}blank \space \color{orange}blank}$$
