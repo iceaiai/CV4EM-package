@@ -1,16 +1,22 @@
-import tkinter as tk
-import pandas as pd
-import numpy as np
+# Used to create the GUI
+import tkinter as tk 
+# Used to handle data in tabular form
+import pandas as pd 
+# Used for numerical operation, especially for handlng NaN values
+import numpy as np 
+ # Defines the application
 class PeriodicTableApp:
-    def __init__(self, root):
-        self.root = root
+    def __init__(self, root): 
+        # Stores the main window of the application
+        self.root = root 
         self.root.title("Interactive Periodic Table with X-ray Lines")
         """
         Data structure for elements: 
-        Symbol, Name, AtomicNumber for pplotting in each block of element
+        Symbol, Name, AtomicNumber for plotting in each block of element
         Row and column for location in periodic table 
         Category for coloring
         """
+        # Maps element categories to specific colors.
         self.colors = {
             "Nonmetal": "#FF9999",
             "Noble Gas": "#99CCCC",
@@ -154,7 +160,10 @@ class PeriodicTableApp:
             {"Symbol": "Ts", "Name": "Tennessine", "AtomicNumber": 117, "Row": 6, "Column": 16, "Category": "Halogen"},
             {"Symbol": "Og", "Name": "Oganesson", "AtomicNumber": 118, "Row": 6, "Column": 17, "Category": "Noble Gas"},
         ]
+        # Converts the self.element list into a Pandas DataFrame for easier manupulation
         self.df_elements = pd.DataFrame(data = self.elements)
+        # Each key is an element symbol, and the value is a list of X-ray line energies for that element. 
+        # The list contains energies for: Kα, Kα2, Kβ1, Lα, Lα2, Lβ1, Lβ2, Ly1, Mα.
         self.x_ray_energies = {
             "Li": [54.3, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan],
             "Be": [108.5, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan],
@@ -254,11 +263,16 @@ class PeriodicTableApp:
             "Pu": [np.nan, np.nan, np.nan, 14278.6, 14084.2, 18293.7, 17255.3, 21417.3, np.nan],
             "Am": [np.nan, np.nan, np.nan, 14617.2, 14411.9, 18852.0, 17676.5, 22065.2, np.nan]
         }
+        #  
         self.df_xray_energies = pd.DataFrame(self.x_ray_energies).T
         self.df_xray_energies.columns = ["Ka", "Ka2", "Kb1", "La", "La2", "Lb1", "Lb2", "Ly1", "Ma"]
+        # Stores the symbols of elements selected by the user 
         self.selected_elements = []
+        # Stores the X-ray lines selected by the user
         self.xray_lines = []
+        # Stores the display-friendly versin of X-ray lines
         self.xray_lines_display = []
+        # Calls the create_widgets method to build the GUI
         self.create_widgets()
 
     def create_widgets(self):
@@ -270,35 +284,38 @@ class PeriodicTableApp:
             col = element_data['Column']
             category = element_data['Category']
             #grey out the elements which does not have x-ray energy in list
+            # Retrieves the X-ray energies for the element
             energies = self.x_ray_energies.get(symbol, [np.nan]*9) #if no data, return all nans
+            # Formats the energies into human-readable strings (Ka: 1.49 keV)
+            # If an energy value is np.nan, it skips displaying that line
             k_alpha = f"Kα: {energies[0]/1000:.2f} keV" if not np.isnan(energies[0]) else ""
             #k_alpha2 = f"Kα: {energies[1]/1000:.2f} keV" if not np.isnan(energies[1]) else ""
             #k_beta2 = f"Kb: {energies[2]/1000:.2f} keV" if not np.isnan(energies[2]) else ""
             l_alpha = f"Lα: {energies[3]/1000:.2f} keV" if not np.isnan(energies[3]) else ""
             m_alpha = f"Mα: {energies[8]/1000:.2f} keV" if not np.isnan(energies[8]) else ""
 
-            btn_text = f"{symbol}\n{k_alpha}\n{l_alpha}\n{m_alpha}" #what show in the button
+            btn_text = f"{symbol}\n{k_alpha}\n{l_alpha}\n{m_alpha}" # What shows in the button
             btn_color = self.colors.get(category, "#CCCCCC")  # Default to grey if not found
-
+            # Create button
             btn = tk.Button(self.root,
                             text=btn_text,
                             bg=btn_color,
                             command=lambda e=symbol: self.handle_click(e),
                             width=10, height=4)  
-            btn.grid(row=row, column=col, padx=2, pady=2) # use the coordiantion row and col to make periodic table
+            btn.grid(row=row, column=col, padx=2, pady=2) # use the coordination row and col to make periodic table
 
         # Add a listbox to display selected elements
         self.selected_list = tk.Listbox(self.root, height=10)
         self.selected_list.grid(row=0, column=19, rowspan=7, padx=20)
 
-        # Add a "Delete Element" button
+        # Add a "Delete Element" button to delete the currently selected element from the listbox
         tk.Button(self.root, text="Delete Element", command=lambda: self.handle_delete(self.selected_list.get(tk.ANCHOR))).grid(row=5, column=19, padx=20)
 
         # Add checkbuttons for X-ray lines
         self.xray_lines_ka1 = tk.BooleanVar()
         self.ka1_check = tk.Checkbutton(self.root, text="Kα", variable=self.xray_lines_ka1)
         self.ka1_check.grid(row=0, column=20)
-
+    
         self.xray_lines_la1 = tk.BooleanVar()
         self.la1_check = tk.Checkbutton(self.root, text="Lα", variable=self.xray_lines_la1)
         self.la1_check.grid(row=1, column=20)
@@ -311,21 +328,21 @@ class PeriodicTableApp:
         self.xray_line_list = tk.Listbox(self.root, height=10)
         self.xray_line_list.grid(row=0, column=21, rowspan=7, padx=20)
 
-        # Add buttons to add or delete X-ray lines
+        # Add buttons to "add" or "delete X-ray lines"
         tk.Button(self.root, text="Add X-ray Line", command=self.add_xray_lines).grid(row=3, column=20)
         tk.Button(self.root, text="Delete X-ray Line", command=self.delete_xray_lines).grid(row=4, column=20)
-
+    # Adds the clicked element to the selected_elements list, then updates display and X-ray line options
     def handle_click(self, symbol):
         if symbol not in self.selected_elements:
             self.selected_elements.append(symbol)
         self.update_display()
         self.update_xray_options(symbol)
-
+    # Removes the select element from the selected_elements list and updates the display
     def handle_delete(self, symbol):
         if symbol in self.selected_elements:
             self.selected_elements.remove(symbol)
         self.update_display()
-
+    # Clears and updates the listboxes for selected elements and X-ray lines
     def update_display(self):
         self.selected_list.delete(0, tk.END)
         for elem in self.selected_elements:
@@ -357,13 +374,13 @@ class PeriodicTableApp:
             self.xray_lines.append(f"{selected_element}_Ma")
 
         self.update_display()
-
+    # Removes the selected X-ray line from the X-ray_lines list
     def delete_xray_lines(self):
         selected_line = self.xray_line_list.get(tk.ANCHOR)
         if selected_line in self.xray_lines:
             self.xray_lines.remove(selected_line)
         self.update_display()
-
+    # Enables or disables the X-ray line chechboxes based on the selected elements's avaialable X-rays lines 
     def update_xray_options(self, symbol):
         energies = self.x_ray_energies.get(symbol, [np.nan]*9)
         
