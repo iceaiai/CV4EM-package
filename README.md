@@ -45,7 +45,7 @@ The `kfactor.py` module requires the following Python libraries:
 
 Install the dependencies using `pip`:
 ```python 
-  pip install pandas numpy
+  pip install pandas hyperspy expy numpy 
 ```
 ### Importing the Module
 To use the `kfactors` class, import the module as follows:
