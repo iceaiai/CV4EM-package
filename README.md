@@ -20,86 +20,37 @@ You can install these dependencies using pip:
 
 ```
 
-##  Data Directory Documentation
+## kfactor.py 
+### Table of Contents
+  1. Introduction
+     - Purpose of the Module
+     - Key Features
+  2. Installation and Setup
+     - Dependencies
+     - Importing the Module
+  3. Class Overview
+     - `kfactors` Class
+  4. Methods
+     - `__init__`
+     - `find_kfactors`
+5. Examples
+    - Basic Usage
+    - Advanced Usage
+6. Troubleshooting
+    - Common Errors
+    - Debugging Tips
+7. FAQs
+---
+## 1. Introduction
+Purpose of the Module
+The kfactor.py module is designed to manage and retrieve k-factors for elements and their X-ray lines. K-factors are essential for quantitative analysis in Energy Dispersive X-ray Spectroscopy (EDS), as they allow the conversion of X-ray intensities into elemental concentrations. This module is specifically tailored for Bruker EDS detectors used in Hitachi HD2700 STEM systems.
 
-The `data/` directory contains core modules for managing k-factors and periodic table data.
+Key Features
+Predefined k-factors: Includes k-factors for a wide range of elements and their X-ray lines (K, L, M).
 
-### K-Factor Script Documentation 
-The `k_factor.py` script provides functionality to manage and retrieve k-factors for an EDS (Energy-Dispersive X-ray Spectroscopy) detector. K-factors are used to quantify the relationship between X-ray signal intensity and elemental concentration in materials science. This script is specifically designed for a Bruker EDS detector installed in a Hitachi HD2700 STEM.
+Flexible input formats: Supports lists of X-ray lines and EDS spectrum objects.
 
-#### Installation / Dependencies 
-
-The script requires the following Python libraries:
-
-- `Pandas`: For organizing and querying k-factor data.
-
-- `NumPy`: For handling array-like inputs.
-
-- `HyperSpy`: For compatibility with HyperSpy spectrum objects.
-
-To install the dependencies, run:
-
-```
- pip install pandas numpy hyperspy exspy
-
-```
-
-#### Usage
-
-The `kfactors` class is the core of the script. It organizes k-factor data and provides methods to retrieve k-factors for specific X-ray lines.
-
-_Attributes_
-- `self.column`: A list of column names in the k-factor data table.
-
-    - Format: `['Z', 'Element', 'K', 'L', 'M']`
-
-- `self.data`: A list of lists containing k-factor data for each element.
-
-- `self.kfactors_HD2700`: A Pandas DataFrame storing the k-factor data.
-
-_Methods_
-
-`__init__()`
-Initializes the `kfactors` class and sets up the k-factor data.
-
-`find_kfactors(x_rayline_list, index='Element')`
-Retrieves the k-factors for the given X-ray lines.
-
-_Parameters_
-
-- `x_rayline_list`: A list of X-ray lines (e.g., `['Al_Ka', 'Zr_Ka']`) or a HyperSpy `EDSTEMSpectrum`/`EDSSEMSpectrum` object.
-
-- `index`: The column to use for searching (default is `'Element'`).
-
-_Returns_
-
-A list of k-factors corresponding to the requested X-ray lines.
-
-#### Examples 
-
-Using a List of X-ray Lines
-```python 
-from k_factor import kfactors
-
-# Initialize the kfactors class
-kfactor = kfactors()
-
-# Get k-factors for specific X-ray lines
-results = kfactor.find_kfactors(x_rayline_list=['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka'])
-print(results)  # Output: [11.011, 6.180, 1.700, 1.210]
-
-```
-
-#### **`K_factor.py`**
-
-
-
-### Notes
-
-- The `data/` directory includes core modules like `K_factor.py` and `Periodical_table.py`.
-- The `module/` directory is for application-specific modules (add your custom modules here
-- The `utils/` directory contains helper functions and utilities.
-- The top-level `__init__.py` initializes the `CV4EM` package, enabling imports like `from CV4EM import ...`.
+Easy retrieval: Quickly retrieve k-factors for specific elements and X-ray lines.
 
 
 
