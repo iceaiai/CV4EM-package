@@ -4,22 +4,6 @@ This is the repository for a library with integrated modules developed by the **
 
 ---
 
-## Prerequisites
-
-Make sure you have the following libraries installed:
-
-- `pandas`
-- `numpy`
-- `hyperspy`
-- `exspy`
-
-You can install these dependencies using pip:
-
-```
- pip install pandas numpy hyperspy exspy
-
-```
-
 ## kfactor.py 
 ### Table of Contents
   1. **Introduction**
