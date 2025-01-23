@@ -42,17 +42,56 @@ You can install these dependencies using pip:
 7. FAQs
 ---
 ## 1. Introduction
-Purpose of the Module
-The kfactor.py module is designed to manage and retrieve k-factors for elements and their X-ray lines. K-factors are essential for quantitative analysis in Energy Dispersive X-ray Spectroscopy (EDS), as they allow the conversion of X-ray intensities into elemental concentrations. This module is specifically tailored for Bruker EDS detectors used in Hitachi HD2700 STEM systems.
+### Purpose of the Module
+The `kfactor.py` module is designed to manage and retrieve k-factors for elements and their X-ray lines. K-factors are essential for quantitative analysis in Energy Dispersive X-ray Spectroscopy (EDS), as they allow the conversion of X-ray intensities into elemental concentrations. This module is specifically tailored for Bruker EDS detectors used in Hitachi HD2700 STEM systems.
 
-Key Features
-Predefined k-factors: Includes k-factors for a wide range of elements and their X-ray lines (K, L, M).
+### Key Features
+ - Predefined k-factors: Includes k-factors for a wide range of elements and their X-ray lines (K, L, M).
+ - Flexible input formats: Supports lists of X-ray lines and EDS spectrum objects.
+ - Easy retrieval: Quickly retrieve k-factors for specific elements and X-ray lines.
+## 2. Installation and Setup
+### Dependencies
+The `kfactor.py` module requires the following Python libraries:
 
-Flexible input formats: Supports lists of X-ray lines and EDS spectrum objects.
+   - `pandas`: For data manipulation.
+   - `hyperspy`:
+   - `expy`: 
+   -  `numpy`: For numerical operations.
+   - `copy`: For creating deep copies of objects.
 
-Easy retrieval: Quickly retrieve k-factors for specific elements and X-ray lines.
+Install the dependencies using `pip`:
+```python 
+  pip install pandas numpy
+```
+### Importing the Module
+To use the `kfactors` class, import the module as follows:
+```python
+from kfactor import kfactors
+```
+## 3. Class Overview
+### `kfactors` Class
+The `kfactors` class is the core of the module. It provides methods to store, access, and retrieve k-factors for elements and their X-ray lines.
 
+### Attributes
+  - `column`: A list of column names for the k-factor data (`['Z', 'Element', 'K', 'L', 'M']`).
+  - `data`: A list of lists containing k-factor data for each element.
+  - `kfactors_HD2700`: A pandas.DataFrame storing the k-factor data in a tabular format.
+## 4. Methods
+  - `__init__`: Initializes the class and sets up the k-factor data.
+  - `find_kfactors`: Retrieves k-factors for a given list of X-ray lines.
+### Description
+Initializes the `kfactors` class and sets up the k-factor data.
 
+#### Parameters
+None.
+
+#### Returns
+None.
+
+#### Example
+```python
+kfactor = kfactors()  # Initializes the clas
+```
 
 
 $${\color{red}blank \space \color{lightblue}blank \space \color{orange}blank}$$
