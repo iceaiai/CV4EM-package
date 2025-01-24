@@ -91,7 +91,7 @@ A list of elements and their corresponding k-factors for the K, L, and M X-ray l
     [11, 'Na', 0.932, 0, 0]
 ]
 ````
-### `kfactors_HD2700` (pandas.DataFrame):
+### `kfactors_HD2700` Pandas DataFrame:
 
 A DataFrame containing the element data (Z, Element, K, L, M) that allows for fast searching and retrieval of k-factors.
 
@@ -104,7 +104,7 @@ Z  Element        K     L     M
 ```
 
 ## 4. Methods
-`__init__(self)`
+## `__init__(self)`
 
 The constructor method that initializes the attributes of the kfactors class. It defines the column names and k-factor data, then converts the data into a Pandas DataFrame for easy access.
 
@@ -117,25 +117,33 @@ None (initializes the object).
 kfactor = kfactors()  # Initializes the class
 ```
 
-## `find_kfactors` Method
+## `find_kfactors`
 ```python
 def find_kfactors(self, x_rayline_list, index='Element'):
 ```
-Retrieves k-factors for a given list of X-ray lines. Supports multiple input formats, including lists of X-ray lines and EDS spectrum objects.
+ Retrieves the k-factors for the specified X-ray lines. This method allows users to look up k-factors by providing a list of X-ray lines (such as Al_Ka, Zr_Ka).
+
+
 
 ### **Parameters**
 
 `x_rayline_list`: `list`, `numpy.ndarray`, `exspy.signals.eds_tem.EDSTEMSpectrum`, or `exspy.signals.eds_sem.EDSSEMSpectrum`.
+
 Specifies the X-ray lines for which k-factors are to be retrieved.
 
   - If a **list** or **NumPy array** is provided, it should contain X-ray lines in the format `'Element_Line'` (e.g., `['Al_Ka', 'Zr_Ka']`).
 
   - If an **EDS spectrum object** is provided (from the `exspy` library), the X-ray lines will be extracted automatically from the object's metadata.
 
-### **Example**
+### **Returns**
+A list of k-factors corresponding to the provided X-ray lines.
 
+### **Example**
 ```python
-x_rayline_list = ['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka']
+kfactors_instance = kfactors()
+kfactors_result = kfactors_instance.find_kfactors(['Al_Ka', 'Zr_Ka', 'O_Ka'])
+print(kfactors_result)
+# Output: [11.011, 1.7, 1.21]
 ```
 
 `index` : `str`, optional (default: `'Element'`)
@@ -167,6 +175,21 @@ Example:
 results = kfactor.find_kfactors(x_rayline_list=['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka'], index='Element')
 print(results)  # Output: [11.011, 6.18, 1.7, 1.21]
 ````
+
+1. The method first checks if a custom DataFrame (`df`) is provided. If not, it uses the internal `kfactors_HD2700` DataFrame.
+2. It sets the index of the DataFrame to the `index` parameter (default: `'Element'`).
+3. It iterates over the provided `x_rayline_list`, extracts the element and X-ray line (e.g., `Al_Ka` -> `Al` and `Ka`), and retrieves the corresponding k-factor from the DataFrame.
+4. It returns a list of k-factors.
+
+> [!WARNING]
+> If the input x_rayline_list is not in the correct format, the method will print a helpful error message:
+
+> Error Message Example:
+```python
+print(f"Please assign x-rayline_list values with a list format: [element1_Ka', 'element2_La'... ]")
+````
+> This ensures that users are aware of the required format and can correct the input accordingly.
+
 ## 5. Examples
 ### Basic Usage
 Retrieve k-factors for specific X-ray lines:
@@ -184,7 +207,7 @@ results = kfactor.find_kfactors(x_rayline_list=['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka
 print(results)  # Output: [11.011, 6.18, 1.7, 1.21]
 ````
 ### Advanced Usage
-Retrieve k-factors from an EDS spectrum object:
+Suppose you're working with a HyperSpy EDS spectrum and want to retrieve the k-factors for the X-ray lines present in the spectrum. Here's how you can do it:
 
 ```python
 from kfactor import kfactors
