@@ -55,7 +55,8 @@ Bases: `object`
 
 Class to store and retrieve k-factors for elements based on their X-ray lines (K, L, M) for the Bruker EDS detector equipped in Hitachi HD2700 STEM. It allows querying k-factors for specific elements and X-ray lines, including handling complex spectrum data. The k-factors are stored in a pandas DataFrame (`kfactors_HD2700`), which is created from a list of raw data.
 
-> ### **Attributes:**
+> ## **Attributes:**
+---
   __self.column :__
 
   A list defining the names of the columns in the data table.
@@ -97,6 +98,7 @@ An optional Pandas DataFrame to use for k-factor data lookup. If not provided, t
 
 A list of column names to use for indexing in the DataFrame. If not provided, the method will use the default columns defined in the class (i.e., `['Z', 'Element', 'K', 'L', 'M']`).
 
+> ## **Method:**
 find_kfactors(x_rayline_list, index='Element')
 
 Finds the k-factor(s) for the specified x-ray line(s). It looks up the corresponding k-factors in the DataFrame (e.g., `self.kfactors_HD2700`). The `index` allows for flexible searching through different columns of the DataFrame (e.g., `'Element'`, `'Z'`, etc.).
