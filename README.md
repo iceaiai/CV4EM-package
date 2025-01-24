@@ -112,7 +112,7 @@ self.kfactors_HD2700 = pd.DataFrame(data=self.data, columns=self.column)
 **pd.DataFrame(data=data, df=None, columns=column)**
 
 > #### **Parameters:**
-data : `list of lists`, `NumPy array`, `dict`, `DataFrame`, or similar, default `None`
+**data**: `list` of `lists`, `NumPy array`, `dict`, `DataFrame`, or similar, default `None`
 
 This is the main data that will populate the `DataFrame`. If you pass a list of lists, each sublist is treated as a row in the DataFrame. It can also be a `NumPy array` or a dictionary, depending on the structure of the data. If a `DataFrame` is provided, it will be used directly. If `list of lists`, each inner list corresponds to a row of data.
 If `NumPy array`, the shape of the array should match the intended number of rows and columns.
@@ -120,11 +120,14 @@ If `dict`, keys are used as column labels, and values are the data.
 If a `DataFrame` is passed, it will be used as-is, meaning the columns parameter will be ignored.
 If `None`, a `ValueError` will be raised as `data` is a required parameter.
 
-df : DataFrame, optional, default `None`
-    An optional Pandas DataFrame to use for k-factor data lookup. If not provided, the method uses the default DataFrame (`self.kfactors_HD2700`) initialized in the class.
 
-columns : list of str, optional, default `None`
-    A list of column names to use for indexing in the DataFrame. If not provided, the method will use the default columns defined in the class (i.e., `['Z', 'Element', 'K', 'L', 'M']`).
+**df**: DataFrame, optional, default `None`
+
+An optional Pandas DataFrame to use for k-factor data lookup. If not provided, the method uses the default DataFrame (`self.kfactors_HD2700`) initialized in the class.
+
+**columns** : `list` of `str`, optional, default `None`
+
+A list of column names to use for indexing in the DataFrame. If not provided, the method will use the default columns defined in the class (i.e., `['Z', 'Element', 'K', 'L', 'M']`).
 
 
 ### `kfactors_HD2700` Pandas DataFrame:
