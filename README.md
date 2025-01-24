@@ -53,19 +53,28 @@ To use the `kfactors` class, import the module as follows:
 from kfactor import kfactors
 ```
 ## 3. Class Overview
+|Class/Method Name |	Description |
+| -----------------| -------------|
+| `kfactors` | Class to store and retrieve k-factors for elements based on their X-ray lines (K, L, M) specific to the Bruker EDS detector in the Hitachi HD2700 STEM. | 
+| `__init__`	| Initializes the `kfactors` class, setting up the column names and data (including the k-factors for various elements). | 
+| `column`	| Attribute that defines the column names in the k-factor data (e.g., `Z`, `Element`, `K`, `L`, `M`). | 
+| `data` | 	Attribute that stores the raw k-factor data as a list, representing various elements and their corresponding k-factors. | 
+| `kfactors_HD2700`	| A pandas DataFrame created from the `data` attribute, allowing easy querying and manipulation of the k-factor data. | 
+| `find_kfactors`	| Method to find and retrieve k-factors based on a list of X-ray lines (e.g., `Al_Ka`, `Zr_Ka`). It can work with lists or special spectrum objects.| 
+
 ### `kfactors` Class
-The `kfactors` class is the core of the module. It provides methods to store, access, and retrieve k-factors for elements and their X-ray lines.
+Bases: `object`
+
+Class to store and retrieve k-factors for elements based on their X-ray lines (K, L, M) for the Bruker EDS detector equipped in Hitachi HD2700 STEM. It allows querying k-factors for specific elements and X-ray lines, including handling complex spectrum data. The k-factors are stored in a pandas DataFrame (`kfactors_HD2700`), which is created from a list of raw data.
 
 ### **Attributes**
-### `column` : `list` 
+### `column` list: 
 A list of column names for the k-factor data.
 
 - The list contains the following fields: 
   - `'Z'`: Atomic number of the element.
   - `'Element'`: Name of the element (e.g., 'Al' for Aluminum).
-  - `'K'`: K-line k-factor.
-  - `'L'`: L-line k-factor.
-  -  `'M'`: M-line k-factor.
+  - `K`, `L`, `M`: k-factors for K, L, and M X-ray lines.
 #### **Example**
 ````python
  ['Z', 'Element', 'K', 'L', 'M']
