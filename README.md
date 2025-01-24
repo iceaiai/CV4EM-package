@@ -15,7 +15,7 @@ The `kfactor.py` module requires the following Python libraries:
    -  `numpy`: For numerical operations.
    - `copy`: For creating deep copies of objects.
 
-Install the dependencies using `pip`:
+To install the dependencies, run the following command:
 ```python 
   pip install pandas hyperspy expy numpy 
 ```
