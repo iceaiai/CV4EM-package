@@ -36,54 +36,51 @@ from kfactor import kfactors
 
 ### _class_ **kfactors**
 Bases: `object`
-
+   
 Class to store and retrieve k-factors for elements based on their X-ray lines (K, L, M) for the Bruker EDS detector equipped in Hitachi HD2700 STEM. It allows querying k-factors for specific elements and X-ray lines, including handling complex spectrum data. The k-factors are stored in a pandas DataFrame (`kfactors_HD2700`), which is created from a list of raw data.
 
-> ## **Attributes:**
+   - > #### **Attributes:**
 
- **column (list) :**
+      - **column** : `list`
  
- Column names for the k-factor DataFrame ('Z', 'Element', 'K', 'L', 'M').
+         Column names for the k-factor DataFrame ('Z', 'Element', 'K', 'L', 'M').
 
-**self.data :**
+      - **data** : `list`
 
-A list of lists containing the data for each element. Each inner list contains: 
-  - Atomic number.
-  - Element name.
-  - K-factors for K, L, and M lines.
+         A list of lists, where each inner list represents an element's data, including the atomic number, element name, and k-factors for the K, L, and M lines.
 
-**kfactors_HD2700 (pd.DataFrame) :** 
+      - **kfactors_HD2700** : `pd.DataFrame `
 
- DataFrame holding the k-factor data for each element.
+          DataFrame holding the k-factor data for each element.
 
 
-> ## **Method:**
-_**find_kfactors(x_rayline_list, index='Element')**_
-
-Finds the k-factor(s) for the specified x-ray line(s). It looks up the corresponding k-factors in the DataFrame (e.g., `self.kfactors_HD2700`). The `index` allows for flexible searching through different columns of the DataFrame (e.g., `'Element'`, `'Z'`, etc.).
-
-> #### **Parameters:**
-
-**x_rayline_list :** `list` of `str`, default `None`
-
-List of X-ray lines (e.g., ['Al_Ka', 'Zr_Ka']).
-
-**index : str, default:** `'Element'`
-
-Column to use as the search index (default is 'Element').
-
-
-> #### **Returns:**
-A list of k-factors corresponding to the provided X-ray lines. The list will have the same length as the input `x_rayline_list`.
-
-> #### **Raises:**
-### `ValueError`
-
-  If the input is not a list or array of X-ray lines.
-  
- ### `KeyError` 
- 
- If an X-ray line cannot be found in the DataFrame.
+   - > #### **Method:**
+      -  _**find_kfactors(x_rayline_list, index='Element')**_
+      
+         Finds the k-factor(s) for the specified x-ray line(s). It looks up the corresponding k-factors in the DataFrame (e.g., `self.kfactors_HD2700`). The `index` allows for flexible searching through different columns of the DataFrame (e.g., `'Element'`, `'Z'`, etc.).
+      
+         - > #### **Parameters:**
+      
+             - **x_rayline_list :**  `list` of `str`, default `None`
+      
+               List of X-ray lines (e.g., ['Al_Ka', 'Zr_Ka']).
+      
+            - **index : `str`, default:** `'Element'`
+      
+               Column to use as the search index (default is 'Element').
+      
+      
+         - > #### **Returns:**
+           A list of k-factors corresponding to the provided X-ray lines. The list will have the same length as the input `x_rayline_list`.
+      
+         - > #### **Raises:**
+           ### `ValueError`
+      
+             If the input is not a list or array of X-ray lines.
+        
+             ### `KeyError` 
+       
+             If an X-ray line cannot be found in the DataFrame.
 
 
 ### Examples
