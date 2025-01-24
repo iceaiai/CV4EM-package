@@ -98,7 +98,7 @@ self.data = [
 ]
 ```
 
-**self.kfactors_HD2700**
+**self.kfactors_HD2700 :**
 
 A Pandas DataFrame created using self.data and self.column. This DataFrame stores the data for easy access and manipulation.
 
