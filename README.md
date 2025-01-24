@@ -57,9 +57,27 @@ from kfactor import kfactors
 The `kfactors` class is the core of the module. It provides methods to store, access, and retrieve k-factors for elements and their X-ray lines.
 
 #### **Attributes**
-  - `column`: A list of column names for the k-factor data (`['Z', 'Element', 'K', 'L', 'M']`).
-  - `data`: A list of lists containing k-factor data for each element.
-  - `kfactors_HD2700`: A `pandas.DataFrame` storing the k-factor data in a tabular format.
+`column` : `list`
+-  **Description**: A list of column names for the k-factor data.
+-  **Details**: The list contains the following fields:
+      - `'Z'`: Atomic number of the element.
+      - `'Element'`: Name of the element.
+      - `'K'`: K-line k-factor. 
+      - `'L'`: L-line k-factor.
+      - `'M'`: M-line k-factor.
+`data` : `list`
+- **Description**: A list of lists containing the k-factor data for each element.
+- **Details**: Each sublist corresponds to an element and contains: 
+  - 1. Atomic number (`Z`).
+  - 2. Element name (`Element`).
+  - 3. K-line k-factor (`K`).
+  - 4. L-line k-factor (`L`).
+  - 5. M-line k-factor (`M`).
+
+kfactors_HD2700 : pandas.DataFrame
+Description: A pandas.DataFrame constructed from the data and column attributes.
+
+Details: The DataFrame organizes the k-factor data into a tabular format for easy access and manipulation.
 #### **Methods**
   - `__init__`: Initializes the class and sets up the k-factor data.
   - `find_kfactors`: Retrieves k-factors for a given list of X-ray lines.
