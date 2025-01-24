@@ -54,13 +54,9 @@ Class to store and retrieve k-factors for elements based on their X-ray lines (K
 
 > ## **Attributes:**
 
-  __self.column :__
-
-  A list defining the names of the columns in the data table.
-
-  - `'Z'`: Atomic number of the element (e.g., for oxygen, Z = 8).
-  - `'Element'`: Atomic number of the element (e.g., for oxygen, Z = 8).
-  - `'K'`, `'L'`, `'M'`: K-factors for K, L, and M X-ray lines.
+ **column (list) :**
+ 
+ Column names for the k-factor DataFrame ('Z', 'Element', 'K', 'L', 'M').
 
 **self.data :**
 
@@ -69,9 +65,9 @@ A list of lists containing the data for each element. Each inner list contains:
   - Element name.
   - K-factors for K, L, and M lines.
 
-**self.kfactors_HD2700 :**
+**kfactors_HD2700 (pd.DataFrame) :** 
 
-A Pandas DataFrame created using self.data and self.column. This DataFrame stores the data for easy access and manipulation.
+ DataFrame holding the k-factor data for each element.
 
 
 > ## **Method:**
@@ -83,23 +79,25 @@ Finds the k-factor(s) for the specified x-ray line(s). It looks up the correspon
 
 **x_rayline_list :** `list` of `str`, default `None`
 
-A list of X-ray lines (e.g., ['Al_Ka', 'Zr_Ka']) that you want to find the corresponding k-factors for. The X-ray lines are typically a combination of element symbol and X-ray line (e.g., Al_Ka, Zr_Ka). This parameter is required and cannot be None.
+List of X-ray lines (e.g., ['Al_Ka', 'Zr_Ka']).
 
 **index : str, default:** `'Element'`
 
-This parameter specifies which column in the DataFrame should be used as the search index. By default, it is set to `'Element'`. The method will search the `self.kfactors_HD2700 DataFrame` (or whichever DataFrame is being used) based on the values in the specified column (`index`). You can set index to another column name (e.g., 'Z', 'K', etc.) if you want to search using that column instead of 'Element'.
+Column to use as the search index (default is 'Element').
 
 
 > #### **Returns:**
 A list of k-factors corresponding to the provided X-ray lines. The list will have the same length as the input `x_rayline_list`.
 
 > #### **Raises:**
-`ValueError`
+### `ValueError`
 
   If the input is not a list or array of X-ray lines.
+  
+ ### `KeyError` 
+ 
+ If an X-ray line cannot be found in the DataFrame.
 
-> #### **Restrictions:**
-The input `x_rayline_list` must contain X-ray lines in the correct format. The method can handle lists, numpy arrays, or HyperSpy EDS spectrum objects.
 
 ### Examples
 
@@ -114,13 +112,10 @@ x_rayline_list = ['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka']
 results = kfactor.find_kfactors(x_rayline_list=x_rayline_list, index='Element')
 
 # Output: results will contain the k-factors corresponding to each element's X-ray line in the list
-print(results)
+print(results)  # Output: [11.011, 1.7, 1.21, 6.18]
 ````
 
-Expected Output:
-```python
->>> [11.011, 1.7, 1.21, 6.18]
-```
+
 
 ## 4. Troubleshooting
 ### Common Errors
