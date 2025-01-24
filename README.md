@@ -62,44 +62,71 @@ from kfactor import kfactors
 | `kfactors_HD2700`	| A pandas DataFrame created from the `data` attribute, allowing easy querying and manipulation of the k-factor data. | 
 | `find_kfactors`	| Method to find and retrieve k-factors based on a list of X-ray lines (e.g., `Al_Ka`, `Zr_Ka`). It can work with lists or special spectrum objects.| 
 
-### `kfactors` Class
+### _class_ **kfactors**
 Bases: `object`
 
 Class to store and retrieve k-factors for elements based on their X-ray lines (K, L, M) for the Bruker EDS detector equipped in Hitachi HD2700 STEM. It allows querying k-factors for specific elements and X-ray lines, including handling complex spectrum data. The k-factors are stored in a pandas DataFrame (`kfactors_HD2700`), which is created from a list of raw data.
 
-### **Attributes**
-### `column` list: 
-A list of column names for the k-factor data.
+> ### **Attributes:**
+  __self.column :__
 
-- The list contains the following fields: 
-  - `'Z'`: Atomic number of the element.
-  - `'Element'`: Name of the element (e.g., 'Al' for Aluminum).
-  - `K`, `L`, `M`: k-factors for K, L, and M X-ray lines.
+  A list defining the names of the columns in the data table.
+
+  - `'Z'`: Atomic number of the element (e.g., for oxygen, Z = 8).
+  - `'Element'`: Atomic number of the element (e.g., for oxygen, Z = 8).
+  - `'K'`, `'L'`, `'M'`: K-factors for K, L, and M X-ray lines.
+
 #### **Example**
 ````python
- ['Z', 'Element', 'K', 'L', 'M']
+self.column = ['Z', 'Element', 'K', 'L', 'M']
 ````
-    
-### `data` (list of list):
 
-A list of elements and their corresponding k-factors for the K, L, and M X-ray lines.
+**self.data :**
 
-- Each sublist corresponds to an element and contains:
-  1. Atomic number (`Z`).
-  2. Element name (`Element`).
-  3. K-line k-factor (`K`).
-  4. L-line k-factor (`L`).
-  5. M-line k-factor (`M`).
+A list of lists containing the data for each element. Each inner list contains: 
+  - Atomic number.
+  - Element name.
+  - K-factors for K, L, and M lines.
 
 #### **Example**
-````python
-  [
-    [1, 'H', 0, 0, 0],
-    [2, 'He', 0, 0, 0],
-    [6, 'C', 11.907, 0, 0],
-    [11, 'Na', 0.932, 0, 0]
+
+```python
+self.data = [
+    [1, 'H', 0, 0, 0], [2, 'He', 0, 0, 0], [3, 'Li', 0, 0, 0],
+    # More elements...
+    [98, 'Cf', 37892.321, 10.560, 3.050]
 ]
+```
+
+**self.kfactors_HD2700**
+
+A Pandas DataFrame created using self.data and self.column. This DataFrame stores the data for easy access and manipulation.
+
+#### **Example**
+
+````python
+self.kfactors_HD2700 = pd.DataFrame(data=self.data, columns=self.column)
 ````
+
+  #### **Constructor:**
+**pd.DataFrame(data=data, df=None, columns=column)**
+
+> #### **Parameters:**
+data : `list of lists`, `NumPy array`, `dict`, `DataFrame`, or similar, default `None`
+
+This is the main data that will populate the `DataFrame`. If you pass a list of lists, each sublist is treated as a row in the DataFrame. It can also be a `NumPy array` or a dictionary, depending on the structure of the data. If a `DataFrame` is provided, it will be used directly. If `list of lists`, each inner list corresponds to a row of data.
+If `NumPy array`, the shape of the array should match the intended number of rows and columns.
+If `dict`, keys are used as column labels, and values are the data.
+If a `DataFrame` is passed, it will be used as-is, meaning the columns parameter will be ignored.
+If `None`, a `ValueError` will be raised as `data` is a required parameter.
+
+df : DataFrame, optional, default `None`
+    An optional Pandas DataFrame to use for k-factor data lookup. If not provided, the method uses the default DataFrame (`self.kfactors_HD2700`) initialized in the class.
+
+columns : list of str, optional, default `None`
+    A list of column names to use for indexing in the DataFrame. If not provided, the method will use the default columns defined in the class (i.e., `['Z', 'Element', 'K', 'L', 'M']`).
+
+
 ### `kfactors_HD2700` Pandas DataFrame:
 
 A DataFrame containing the element data (Z, Element, K, L, M) that allows for fast searching and retrieval of k-factors.
@@ -144,20 +171,34 @@ Specifies the X-ray lines for which k-factors are to be retrieved.
 
   - If an **EDS spectrum object** is provided (from the `exspy` library), the X-ray lines will be extracted automatically from the object's metadata.
 
-### **Returns**
-A list of k-factors corresponding to the provided X-ray lines.
-
-### **Example**
-```python
-kfactors_instance = kfactors()
-kfactors_result = kfactors_instance.find_kfactors(['Al_Ka', 'Zr_Ka', 'O_Ka'])
-print(kfactors_result)
-# Output: [11.011, 1.7, 1.21]
-```
-
 `index` : `str`, optional (default: `'Element'`)
 
 Specifies the column to use as the index for searching in the DataFrame. By default, the `'Element'` column is used as the index. This parameter allows you to change the index to another column (e.g., `'Z'` for atomic number).
+
+
+### **Returns**
+`data_list` (list of float):
+
+A list of k-factor values corresponding to the X-ray lines provided in `x_rayline_list`. The list is ordered in the same way as the input list of X-ray lines.
+
+### **Example**
+```python
+# Create an instance of the kfactors class
+kfactor = kfactors()
+
+# Define a list of X-ray lines you want to retrieve k-factors for
+x_rayline_list = ['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka']
+
+# Use the find_kfactors method to get the k-factors for the specified X-ray lines
+results = kfactor.find_kfactors(x_rayline_list=x_rayline_list)
+
+# Print the results
+print(results)  # Output: [11.011, 1.7, 1.21, 6.18]
+
+```
+
+
+
 
 ### **Example**:
 
