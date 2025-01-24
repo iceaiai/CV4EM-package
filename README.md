@@ -24,7 +24,7 @@ To use the `kfactors` class, import the module as follows:
 ```python
 from kfactor import kfactors
 ```
-## 3. Class Overview
+## 2. Class Overview
 |Class/Method Name |	Description |
 | -----------------| -------------|
 | `kfactors` | Class to store and retrieve k-factors for elements based on their X-ray lines (K, L, M) specific to the Bruker EDS detector in the Hitachi HD2700 STEM. | 
@@ -104,7 +104,7 @@ print(results)  # Output: [11.011, 1.7, 1.21, 6.18]
 
 
 
-## 4. Troubleshooting
+## 3. Troubleshooting
 ### Common Errors
   1. **Invalid X-ray line format**:
      - Error: `Please assign x-rayline_list values with a list format: [element1_K(or L or M)a','element2_K(or L or M)a'... ]`
@@ -118,7 +118,7 @@ print(results)  # Output: [11.011, 1.7, 1.21, 6.18]
   - Use `print` statements to inspect intermediate values (e.g., `EDS_lines`, `idx`, `line`).
   - Verify the input format of `x_rayline_list`.
 
-## 5. FAQs
+## 4. FAQs
 ### **Q1: What are k-factors?**
 K-factors are conversion factors used in EDS to convert X-ray intensities into elemental concentrations. They are specific to the detector and instrument configuration.
 
