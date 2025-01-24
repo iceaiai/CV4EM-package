@@ -4,12 +4,8 @@ This is the repository for a library with integrated modules developed by the **
 
 ---
 
-## kfactor.py 
 ### Table of Contents
-  1. **Introduction**
-     - Purpose of the Module
-     - Key Features
-  2. **Installation and Setup**
+  1. **Installation and Setup**
      - Dependencies
      - Importing the Module
   3. **Class Overview**
@@ -25,15 +21,7 @@ This is the repository for a library with integrated modules developed by the **
     - Debugging Tips
 7. **FAQs**
 ---
-## 1. Introduction
-### Purpose of the Module
-The `kfactor.py` module is designed to manage and retrieve **k-factors** for elements and their X-ray lines. K-factors are essential for quantitative analysis in **Energy Dispersive X-ray Spectroscopy (EDS)**, as they allow the conversion of X-ray intensities into elemental concentrations. This module is specifically tailored for **Bruker EDS detectors** used in **Hitachi HD2700 STEM** systems.
-
-### Key Features
- - **Predefined k-factors**: Includes k-factors for a wide range of elements and their X-ray lines (K, L, M).
- - **Flexible input formats**: Supports lists of X-ray lines and EDS spectrum objects.
- - **Easy retrieval**: Quickly retrieve k-factors for specific elements and X-ray lines.
-## 2. Installation and Setup
+## 1. Installation and Setup
 ### Dependencies
 The `kfactor.py` module requires the following Python libraries:
 
@@ -76,11 +64,6 @@ Class to store and retrieve k-factors for elements based on their X-ray lines (K
   - `'Element'`: Atomic number of the element (e.g., for oxygen, Z = 8).
   - `'K'`, `'L'`, `'M'`: K-factors for K, L, and M X-ray lines.
 
-#### **Example**
-````python
-self.column = ['Z', 'Element', 'K', 'L', 'M']
-````
-
 **self.data :**
 
 A list of lists containing the data for each element. Each inner list contains: 
@@ -88,27 +71,12 @@ A list of lists containing the data for each element. Each inner list contains:
   - Element name.
   - K-factors for K, L, and M lines.
 
-#### **Example**
-
-```python
-self.data = [
-    [1, 'H', 0, 0, 0], [2, 'He', 0, 0, 0], [3, 'Li', 0, 0, 0],
-    # More elements...
-    [98, 'Cf', 37892.321, 10.560, 3.050]
-]
-```
-
 **self.kfactors_HD2700 :**
 
 A Pandas DataFrame created using self.data and self.column. This DataFrame stores the data for easy access and manipulation.
 
-#### **Example**
 
-````python
-self.kfactors_HD2700 = pd.DataFrame(data=self.data, columns=self.column)
-````
-
-  #### **Constructor:**
+> ### **Constructors:**
 **pd.DataFrame(data=data, df=None, columns=column)**
 
 > #### **Parameters:**
@@ -129,18 +97,49 @@ An optional Pandas DataFrame to use for k-factor data lookup. If not provided, t
 
 A list of column names to use for indexing in the DataFrame. If not provided, the method will use the default columns defined in the class (i.e., `['Z', 'Element', 'K', 'L', 'M']`).
 
+find_kfactors(x_rayline_list, index='Element')
 
-### `kfactors_HD2700` Pandas DataFrame:
+Finds the k-factor(s) for the specified x-ray line(s). It looks up the corresponding k-factors in the DataFrame (e.g., `self.kfactors_HD2700`). The `index` allows for flexible searching through different columns of the DataFrame (e.g., `'Element'`, `'Z'`, etc.).
 
-A DataFrame containing the element data (Z, Element, K, L, M) that allows for fast searching and retrieval of k-factors.
+> #### **Parameters:**
 
-#### **Example**
+x_rayline_list : `list` of `str`, default `None`
+
+A list of X-ray lines (e.g., ['Al_Ka', 'Zr_Ka']) that you want to find the corresponding k-factors for. The X-ray lines are typically a combination of element symbol and X-ray line (e.g., Al_Ka, Zr_Ka). This parameter is required and cannot be None.
+
+index : str, default: `'Element'`
+
+This parameter specifies which column in the DataFrame should be used as the search index. By default, it is set to `'Element'`. The method will search the `self.kfactors_HD2700 DataFrame` (or whichever DataFrame is being used) based on the values in the specified column (`index`). You can set index to another column name (e.g., 'Z', 'K', etc.) if you want to search using that column instead of 'Element'.
+
+
+> #### **Returns:**
+A list of k-factors corresponding to the provided X-ray lines. The list will have the same length as the input `x_rayline_list`.
+
+
+Example Usage:
+
 ```python
-Z  Element        K     L     M
-1   H           0.0    0.0    0.0
-2  He           0.0    0.0    0.0
-6   C          11.907  0.0    0.0
+# Example Usage of the `kfactors` class and `find_kfactors` method
+kfactor = kfactors()  # Instantiate the kfactors object
+
+# List of X-ray lines (e.g., ['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka'])
+x_rayline_list = ['Al_Ka', 'Zr_Ka', 'O_Ka', 'Ti_Ka']
+
+# Finding the k-factors for the provided X-ray lines based on the 'Element' column
+results = kfactor.find_kfactors(x_rayline_list=x_rayline_list, index='Element')
+
+# Output: results will contain the k-factors corresponding to each element's X-ray line in the list
+print(results)
+````
+
+Expected Output:
+```python
+>>> [11.011, 1.7, 1.21, 6.18]
 ```
+
+
+
+
 
 ## 4. Methods
 ## `__init__(self)`
