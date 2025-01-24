@@ -13,13 +13,10 @@ This is the repository for a library with integrated modules developed by the **
 3. **Methods**
      - `__init__`
      - `find_kfactors`
-4. **Examples**
-    - Basic Usage
-    - Advanced Usage
-5. **Troubleshooting**
+4. **Troubleshooting**
     - Common Errors
     - Debugging Tips
-6. **FAQs**
+5. **FAQs**
 ---
 ## 1. Installation and Setup
 ### Dependencies
@@ -97,12 +94,14 @@ This parameter specifies which column in the DataFrame should be used as the sea
 A list of k-factors corresponding to the provided X-ray lines. The list will have the same length as the input `x_rayline_list`.
 
 > #### **Raises:**
-`ValueError`: If the input is not a list or array of X-ray lines.
+`ValueError`
+
+  If the input is not a list or array of X-ray lines.
 
 > #### **Restrictions:**
 The input `x_rayline_list` must contain X-ray lines in the correct format. The method can handle lists, numpy arrays, or HyperSpy EDS spectrum objects.
 
-Example Usage:
+### Examples
 
 ```python
 # Example Usage of the `kfactors` class and `find_kfactors` method
@@ -123,7 +122,7 @@ Expected Output:
 >>> [11.011, 1.7, 1.21, 6.18]
 ```
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 ### Common Errors
   1. **Invalid X-ray line format**:
      - Error: `Please assign x-rayline_list values with a list format: [element1_K(or L or M)a','element2_K(or L or M)a'... ]`
@@ -137,7 +136,7 @@ Expected Output:
   - Use `print` statements to inspect intermediate values (e.g., `EDS_lines`, `idx`, `line`).
   - Verify the input format of `x_rayline_list`.
 
-## 7. FAQs
+## 5. FAQs
 ### **Q1: What are k-factors?**
 K-factors are conversion factors used in EDS to convert X-ray intensities into elemental concentrations. They are specific to the detector and instrument configuration.
 
