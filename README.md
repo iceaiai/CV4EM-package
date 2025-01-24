@@ -2,29 +2,16 @@
 
 This is the repository for a library with integrated modules developed by the **CV4EM team**.
 
----
+<p align="center">Centered text</p>
 
-### Table of Contents
-  1. **Installation and Setup**
-     - Dependencies
-     - Importing the Module
- 2. **Class Overview**
-     - `kfactors` Class
-3. **Methods**
-     - `__init__`
-     - `find_kfactors`
-4. **Troubleshooting**
-    - Common Errors
-    - Debugging Tips
-5. **FAQs**
 ---
 ## 1. Installation and Setup
 ### Dependencies
 The `kfactor.py` module requires the following Python libraries:
 
    - `pandas`: For data manipulation.
-   - `hyperspy`:
-   - `expy`: 
+   - `hyperspy`: For analyzing spectroscopy or electron microscopy data.
+   - `expy`: For advanced signal processing and data analysis.
    -  `numpy`: For numerical operations.
    - `copy`: For creating deep copies of objects.
 
