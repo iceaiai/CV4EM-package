@@ -24,15 +24,6 @@ To use the `kfactors` class, import the module as follows:
 ```python
 from kfactor import kfactors
 ```
-## 2. Class Overview
-|Class/Method Name |	Description |
-| -----------------| -------------|
-| `kfactors` | Class to store and retrieve k-factors for elements based on their X-ray lines (K, L, M) specific to the Bruker EDS detector in the Hitachi HD2700 STEM. | 
-| `__init__`	| Initializes the `kfactors` class, setting up the column names and data (including the k-factors for various elements). | 
-| `column`	| Attribute that defines the column names in the k-factor data (e.g., `Z`, `Element`, `K`, `L`, `M`). | 
-| `data` | 	Attribute that stores the raw k-factor data as a list, representing various elements and their corresponding k-factors. | 
-| `kfactors_HD2700`	| A pandas DataFrame created from the `data` attribute, allowing easy querying and manipulation of the k-factor data. | 
-| `find_kfactors`	| Method to find and retrieve k-factors based on a list of X-ray lines (e.g., `Al_Ka`, `Zr_Ka`). It can work with lists or special spectrum objects.| 
 
 ### _class_ **kfactors**
 Bases: `object`
@@ -97,32 +88,4 @@ results = kfactor.find_kfactors(x_rayline_list=x_rayline_list, index='Element')
 
 # Output: results will contain the k-factors corresponding to each element's X-ray line in the list
 print(results)  # Output: [11.011, 1.7, 1.21, 6.18]
-````
-
-
-
-## 3. Troubleshooting
-### Common Errors
-  1. **Invalid X-ray line format**:
-     - Error: `Please assign x-rayline_list values with a list format: [element1_K(or L or M)a','element2_K(or L or M)a'... ]`
-     - Solution: Ensure the X-ray lines are in the correct format (e.g., `'Al_Ka'`).
-
-2. **Missing dependencies**:
-    - Error: `ModuleNotFoundError: No module named 'pandas'`
-    - Solution: Install the required dependencies using `pip install pandas numpy`.
-
-### Debugging Tips
-  - Use `print` statements to inspect intermediate values (e.g., `EDS_lines`, `idx`, `line`).
-  - Verify the input format of `x_rayline_list`.
-
-## 4. FAQs
-### **Q1: What are k-factors?**
-K-factors are conversion factors used in EDS to convert X-ray intensities into elemental concentrations. They are specific to the detector and instrument configuration.
-
-### **Q2: Can I add new k-factors to the module?**
-Yes, you can modify the `data` attribute in the `kfactors` class to include additional elements or update existing k-factors.
-
-### **Q3: How do I handle missing k-factors?**
-If a k-factor is not available for a given X-ray line, the module returns `0`. You can manually update the `data` attribute to include the missing k-factor.
-
-$${\color{red}blank \space \color{lightblue}blank \space \color{orange}blank}$$
+``
