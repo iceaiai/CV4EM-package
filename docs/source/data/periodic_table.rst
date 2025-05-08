@@ -12,7 +12,10 @@ Periodic Table
 
 .. attribute:: delete_xray_lines()
    Click on an already selected to remove the x-ray lines of that element
-
+.. attribute:: xray_lines():
+   View a list of selected x-ray lines
+.. attribute:: xray_lines_display()
+   View a list of selectec x-ray lines along with their energy
 .. attribute:: update_xray_lines(symbol)
    
    :param symbol: Symbol of element 
