@@ -1,7 +1,37 @@
 import tkinter as tk
 import pandas as pd
 import numpy as np
+"""
+cv4em.periodic_table
+~~~~~~~~~~~~~~~~~~~~
+
+Provides a Tkinter‑based interactive periodic table that lets users
+select chemical elements and build custom X‑ray emission line lists
+(e.g. Kα, Lα, Mα).  Useful for quickly visualizing and exporting
+an element‑line specification for EDS or XRF workflows.
+"""
 class PeriodicTableApp:
+    """
+    A fully‑featured Periodic Table GUI with X‑ray line selection (EDS use). Note this is an optional tool for you
+
+    Usage:
+    import tkinter as tk
+    import CV4EM as cv4em
+
+    # Instantiate the root Tkinter window and the PeriodicTableApp
+    root = tk.Tk()
+    app = PeriodicTableApp(root)
+    root.mainloop()
+
+    ## After select the element and line, run the following:
+    Xray_lines = app.xray_lines
+    Xray_lines should have format like ['Al_Ka','O_Ka']
+
+    Attributes:
+      selected_elements (List[str]): currently‑chosen element symbols.
+      xray_lines        (List[str]): raw element‑line codes for export.
+      xray_lines_display(List[str]): human‑readable lines with keV labels.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Interactive Periodic Table with X-ray Lines")
@@ -262,6 +292,14 @@ class PeriodicTableApp:
         self.create_widgets()
 
     def create_widgets(self):
+        """
+        Build and layout all GUI widgets: element buttons, listboxes, and controls.
+
+        - Places each element button in its grid position.
+        - Sets up the selected-elements listbox and delete button.
+        - Creates checkboxes for Kα, Lα, Mα line selection.
+        - Adds listbox and buttons for managing chosen X-ray lines.
+        """
         # Create buttons for each element
         #for symbol in elements_xray_energies:
         for _, element_data in self.df_elements.iterrows(): #iterate all elements in periodic table
@@ -336,6 +374,12 @@ class PeriodicTableApp:
             self.xray_line_list.insert(tk.END, line)
 
     def add_xray_lines(self):
+        """
+        Add checked X-ray lines (Kα, Lα, Mα) for the currently highlighted element.
+
+        Reads which checkboxes are selected and appends both the
+        raw code (e.g. 'Al_Ka') and display string (e.g. 'Al_Kα: 1.49 keV').
+        """
         selected_element = self.selected_list.get(tk.ANCHOR)
         ka1_var = self.xray_lines_ka1.get()
         la1_var = self.xray_lines_la1.get()
@@ -365,6 +409,13 @@ class PeriodicTableApp:
         self.update_display()
 
     def update_xray_options(self, symbol):
+        """
+        Enable or disable each line-selection checkbox based on
+        whether the chosen element has a non-NaN energy for that line.
+
+        Args:
+            symbol: The atomic symbol whose data to inspect.
+        """
         energies = self.x_ray_energies.get(symbol, [np.nan]*9)
         
         # Kα checkbox
@@ -386,18 +437,5 @@ class PeriodicTableApp:
         else:
             self.ma1_check.config(state="disabled")
             self.xray_lines_ma1.set(False)
-"""
-Usage:
-import tkinter as tk
-import CV4EM as cv4em
 
-# Instantiate the root Tkinter window and the PeriodicTableApp
-root = tk.Tk()
-app = PeriodicTableApp(root)
-root.mainloop()
-
-## After select the element and line, run the following:
-Xray_lines = app.xray_lines
-Xray_lines should have format like ['Al_Ka','O_Ka']
-"""
 
