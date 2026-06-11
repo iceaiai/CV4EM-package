@@ -1,0 +1,1100 @@
+﻿Folder PATH listing for volume Windows
+Volume serial number is 000001D5 BC4D:BA13
+C:\WORK\LYU\TESTING
+|   .gitignore
+|   folder_hierarchy.txt
+|   pyproject.toml
+|   README.md
+|   
++---.ipynb_checkpoints
+|       Image_converted-checkpoint.ipynb
+|       
++---archive
+|   +---migration_logs
+|   |       folder_reorganization_log.txt
+|   |       
+|   +---old_code
+|   |       Image_converted.ipynb
+|   |       Untitled1.ipynb
+|   |       
+|   +---old_outputs
+|   |   \---converted_images_from_raw
+|   |       \---Au rod
+|   |               1_f95ab3aa06.png
+|   |               3_3ac0a0460f.png
+|   |               Au rod A242-40k-1_58acf827ce.png
+|   |               Au rod A242-40k-2_0fb5670845.png
+|   |               Au rod A242-40k-3_0b0c85112b.png
+|   |               Au rod A301-10k_f8c2f786e5.png
+|   |               Au rod A301-6k-1_bdd9e982bc.png
+|   |               Au rod A301-6k-2_d6c8a98d10.png
+|   |               Au rod A301-6k-3_32ddd39eb9.png
+|   |               Au rod A301-6k-6_7672fa931e.png
+|   |               Au rod A389-40k-1_016734e36e.png
+|   |               Au rod A389-40k-3_9bf7d824ec.png
+|   |               Au rod A389-40k-5_c04c37837e.png
+|   |               Au rod A732-1_12b17399f5.png
+|   |               Au rod A732-3_914768a04c.png
+|   |               Au sphere_0001_dfbbe2b779.png
+|   |               Au sphere_0002_e348d99e67.png
+|   |               Au sphere_0003_f8c8f53830.png
+|   |               Au sphere_0004_b56326159b.png
+|   |               Au sphere_0010_b342ea1e0a.png
+|   |               Au sphere_0011_a901a487e1.png
+|   |               Au sphere_0012_9180d428e6.png
+|   |               Au sphere_0013_818059e3d7.png
+|   |               Au sphere_0014_c6d41eb6f3.png
+|   |               Au sphere_0015_320f222ec9.png
+|   |               image_registration.csv
+|   |               image_registration_backup_20260521_183709.csv
+|   |               image_registration_backup_20260521_183725.csv
+|   |               
+|   \---old_selected_images
+|       \---selected_images_from_raw
+|           +---selected_images
+|           |       0645c40c71_r002_c002.json
+|           |       0645c40c71_r002_c002.png
+|           |       0645c40c71_r002_c003.json
+|           |       0645c40c71_r002_c003.png
+|           |       Au rod A242-40k-1_df3db2f91b.json
+|           |       Au rod A242-40k-1_df3db2f91b.png
+|           |       Au rod A242-40k-3_a3588fcaf4.json
+|           |       Au rod A242-40k-3_a3588fcaf4.png
+|           |       Au rod A301-10k_89c0991ab9.json
+|           |       Au rod A301-10k_89c0991ab9.png
+|           |       Au rod A301-6k-2_04b3650249.json
+|           |       Au rod A301-6k-2_04b3650249.png
+|           |       Au rod A301-6k-3_2f41064b4d.png
+|           |       Au rod A389-40k-1_d4d8ab5399.json
+|           |       Au rod A389-40k-1_d4d8ab5399.png
+|           |       Au rod A389-40k-3_465884e609.png
+|           |       Au rod A389-40k-5_32ec7af313.json
+|           |       Au rod A389-40k-5_32ec7af313.png
+|           |       Au rod A732-1_57cad4bb07.png
+|           |       Au rod A732-3_5e3cff4825.json
+|           |       Au rod A732-3_5e3cff4825.png
+|           |       Au sphere_0001_89c46285c8.json
+|           |       Au sphere_0001_89c46285c8.png
+|           |       Au sphere_0002_364291cfed.json
+|           |       Au sphere_0002_364291cfed.png
+|           |       Au sphere_0003_cbdb32b0e4.json
+|           |       Au sphere_0003_cbdb32b0e4.png
+|           |       Au sphere_0014_61e00159f5.json
+|           |       Au sphere_0014_61e00159f5.png
+|           |       Au sphere_0015_ce40e727d5.json
+|           |       Au sphere_0015_ce40e727d5.png
+|           |       baad54fecc_r000_c001.json
+|           |       baad54fecc_r000_c001.png
+|           |       baad54fecc_r000_c002.json
+|           |       baad54fecc_r000_c002.png
+|           |       baad54fecc_r001_c001.json
+|           |       baad54fecc_r001_c001.png
+|           |       baad54fecc_r001_c003.json
+|           |       baad54fecc_r001_c003.png
+|           |       baad54fecc_r002_c000.json
+|           |       baad54fecc_r002_c000.png
+|           |       baad54fecc_r002_c003.json
+|           |       baad54fecc_r002_c003.png
+|           |       baad54fecc_r003_c002.json
+|           |       baad54fecc_r003_c002.png
+|           |       baad54fecc_r003_c003.json
+|           |       baad54fecc_r003_c003.png
+|           |       c3ff8fdb3b_r000_c003.json
+|           |       c3ff8fdb3b_r000_c003.png
+|           |       c3ff8fdb3b_r001_c000.json
+|           |       c3ff8fdb3b_r001_c000.png
+|           |       c3ff8fdb3b_r001_c001.json
+|           |       c3ff8fdb3b_r001_c001.png
+|           |       c3ff8fdb3b_r002_c003.json
+|           |       c3ff8fdb3b_r002_c003.png
+|           |       cfbb8fc3fc_r000_c001.json
+|           |       cfbb8fc3fc_r000_c001.png
+|           |       cfbb8fc3fc_r000_c002.json
+|           |       cfbb8fc3fc_r000_c002.png
+|           |       cfbb8fc3fc_r001_c002.json
+|           |       cfbb8fc3fc_r001_c002.png
+|           |       cfbb8fc3fc_r002_c001.json
+|           |       cfbb8fc3fc_r002_c001.png
+|           |       cfbb8fc3fc_r002_c002.json
+|           |       cfbb8fc3fc_r002_c002.png
+|           |       cfbb8fc3fc_r003_c002.json
+|           |       cfbb8fc3fc_r003_c002.png
+|           |       cfbb8fc3fc_r003_c003.json
+|           |       cfbb8fc3fc_r003_c003.png
+|           |       correction.pptx
+|           |       image_registration.csv
+|           |       
+|           \---__MACOSX
+|               \---selected_images
+|                       ._0645c40c71_r002_c002.json
+|                       ._0645c40c71_r002_c002.png
+|                       ._0645c40c71_r002_c003.png
+|                       ._Au rod A242-40k-1_df3db2f91b.png
+|                       ._Au rod A242-40k-3_a3588fcaf4.json
+|                       ._Au rod A242-40k-3_a3588fcaf4.png
+|                       ._Au rod A301-10k_89c0991ab9.png
+|                       ._Au rod A301-6k-2_04b3650249.png
+|                       ._Au rod A301-6k-3_2f41064b4d.png
+|                       ._Au rod A389-40k-1_d4d8ab5399.png
+|                       ._Au rod A389-40k-3_465884e609.png
+|                       ._Au rod A389-40k-5_32ec7af313.png
+|                       ._Au rod A732-1_57cad4bb07.png
+|                       ._Au rod A732-3_5e3cff4825.png
+|                       ._Au sphere_0001_89c46285c8.png
+|                       ._Au sphere_0002_364291cfed.png
+|                       ._Au sphere_0003_cbdb32b0e4.json
+|                       ._Au sphere_0003_cbdb32b0e4.png
+|                       ._Au sphere_0014_61e00159f5.json
+|                       ._Au sphere_0014_61e00159f5.png
+|                       ._Au sphere_0015_ce40e727d5.json
+|                       ._Au sphere_0015_ce40e727d5.png
+|                       ._baad54fecc_r000_c001.json
+|                       ._baad54fecc_r000_c001.png
+|                       ._baad54fecc_r000_c002.json
+|                       ._baad54fecc_r000_c002.png
+|                       ._baad54fecc_r001_c001.json
+|                       ._baad54fecc_r001_c001.png
+|                       ._baad54fecc_r001_c003.json
+|                       ._baad54fecc_r001_c003.png
+|                       ._baad54fecc_r002_c000.json
+|                       ._baad54fecc_r002_c000.png
+|                       ._baad54fecc_r002_c003.json
+|                       ._baad54fecc_r002_c003.png
+|                       ._baad54fecc_r003_c002.json
+|                       ._baad54fecc_r003_c002.png
+|                       ._baad54fecc_r003_c003.json
+|                       ._baad54fecc_r003_c003.png
+|                       ._c3ff8fdb3b_r000_c003.json
+|                       ._c3ff8fdb3b_r000_c003.png
+|                       ._c3ff8fdb3b_r001_c000.json
+|                       ._c3ff8fdb3b_r001_c000.png
+|                       ._c3ff8fdb3b_r001_c001.json
+|                       ._c3ff8fdb3b_r001_c001.png
+|                       ._c3ff8fdb3b_r002_c003.json
+|                       ._c3ff8fdb3b_r002_c003.png
+|                       ._cfbb8fc3fc_r000_c001.json
+|                       ._cfbb8fc3fc_r000_c001.png
+|                       ._cfbb8fc3fc_r000_c002.json
+|                       ._cfbb8fc3fc_r000_c002.png
+|                       ._cfbb8fc3fc_r001_c002.json
+|                       ._cfbb8fc3fc_r001_c002.png
+|                       ._cfbb8fc3fc_r002_c001.json
+|                       ._cfbb8fc3fc_r002_c001.png
+|                       ._cfbb8fc3fc_r002_c002.json
+|                       ._cfbb8fc3fc_r002_c002.png
+|                       ._cfbb8fc3fc_r003_c002.json
+|                       ._cfbb8fc3fc_r003_c002.png
+|                       ._cfbb8fc3fc_r003_c003.json
+|                       ._cfbb8fc3fc_r003_c003.png
+|                       ._image_registration.csv
+|                       
++---data
+|   +---annotations
+|   |   \---anylabeling
+|   |       +---Au_cube
+|   |       |   \---v001
+|   |       |       \---json
+|   |       +---Au_rod
+|   |       |   \---v001
+|   |       |       \---json
+|   |       \---Au_sphere
+|   |           \---v001
+|   |               \---json
+|   +---cleaned
+|   |   +---images
+|   |   |   +---Au_cube
+|   |   |   |   \---v001
+|   |   |   +---Au_rod
+|   |   |   |   \---v001
+|   |   |   \---Au_sphere
+|   |   |       \---v001
+|   |   \---masks
+|   |       +---Au_cube
+|   |       |   \---v001
+|   |       +---Au_rod
+|   |       |   \---v001
+|   |       \---Au_sphere
+|   |           \---v001
+|   +---converted_images
+|   |   +---Au rod
+|   |   |   |   Au rod A242-40k-1_df3db2f91b.png
+|   |   |   |   Au rod A242-40k-2_48f937097a.png
+|   |   |   |   Au rod A242-40k-3_a3588fcaf4.png
+|   |   |   |   Au rod A301-10k_89c0991ab9.png
+|   |   |   |   Au rod A301-6k-2_04b3650249.png
+|   |   |   |   Au rod A301-6k-3_2f41064b4d.png
+|   |   |   |   Au rod A301-6k-6_3253eedc39.png
+|   |   |   |   Au rod A389-40k-1_d4d8ab5399.png
+|   |   |   |   Au rod A389-40k-3_465884e609.png
+|   |   |   |   Au rod A389-40k-5_32ec7af313.png
+|   |   |   |   Au rod A732-1_57cad4bb07.png
+|   |   |   |   Au rod A732-3_5e3cff4825.png
+|   |   |   |   Au sphere_0001_89c46285c8.png
+|   |   |   |   Au sphere_0002_364291cfed.png
+|   |   |   |   Au sphere_0003_cbdb32b0e4.png
+|   |   |   |   Au sphere_0004_c726fa5c13.png
+|   |   |   |   Au sphere_0010_643825e1d6.png
+|   |   |   |   Au sphere_0011_e7062e6b82.png
+|   |   |   |   Au sphere_0013_86d16ba851.png
+|   |   |   |   Au sphere_0014_61e00159f5.png
+|   |   |   |   Au sphere_0015_ce40e727d5.png
+|   |   |   |   image_registration.csv
+|   |   |   |   image_registration_backup_20260521_183709.csv
+|   |   |   |   image_registration_backup_20260521_183725.csv
+|   |   |   |   selected_images.zip
+|   |   |   |   
+|   |   |   +---1_cfbb8fc3fc_resized
+|   |   |   |       1_cfbb8fc3fc.png
+|   |   |   |       cfbb8fc3fc_r000_c000.png
+|   |   |   |       cfbb8fc3fc_r000_c001.png
+|   |   |   |       cfbb8fc3fc_r000_c002.png
+|   |   |   |       cfbb8fc3fc_r000_c003.png
+|   |   |   |       cfbb8fc3fc_r001_c000.png
+|   |   |   |       cfbb8fc3fc_r001_c001.png
+|   |   |   |       cfbb8fc3fc_r001_c002.png
+|   |   |   |       cfbb8fc3fc_r001_c003.png
+|   |   |   |       cfbb8fc3fc_r002_c000.png
+|   |   |   |       cfbb8fc3fc_r002_c001.png
+|   |   |   |       cfbb8fc3fc_r002_c002.png
+|   |   |   |       cfbb8fc3fc_r002_c003.png
+|   |   |   |       cfbb8fc3fc_r003_c000.png
+|   |   |   |       cfbb8fc3fc_r003_c001.png
+|   |   |   |       cfbb8fc3fc_r003_c002.png
+|   |   |   |       cfbb8fc3fc_r003_c003.png
+|   |   |   |       
+|   |   |   +---3_baad54fecc_resized
+|   |   |   |       3_baad54fecc.png
+|   |   |   |       baad54fecc_r000_c000.png
+|   |   |   |       baad54fecc_r000_c001.png
+|   |   |   |       baad54fecc_r000_c002.png
+|   |   |   |       baad54fecc_r000_c003.png
+|   |   |   |       baad54fecc_r001_c000.png
+|   |   |   |       baad54fecc_r001_c001.png
+|   |   |   |       baad54fecc_r001_c002.png
+|   |   |   |       baad54fecc_r001_c003.png
+|   |   |   |       baad54fecc_r002_c000.png
+|   |   |   |       baad54fecc_r002_c001.png
+|   |   |   |       baad54fecc_r002_c002.png
+|   |   |   |       baad54fecc_r002_c003.png
+|   |   |   |       baad54fecc_r003_c000.png
+|   |   |   |       baad54fecc_r003_c001.png
+|   |   |   |       baad54fecc_r003_c002.png
+|   |   |   |       baad54fecc_r003_c003.png
+|   |   |   |       
+|   |   |   +---Au rod A301-6k-1_c3ff8fdb3b_resized
+|   |   |   |       Au rod A301-6k-1_c3ff8fdb3b.png
+|   |   |   |       c3ff8fdb3b_r000_c000.png
+|   |   |   |       c3ff8fdb3b_r000_c001.png
+|   |   |   |       c3ff8fdb3b_r000_c002.png
+|   |   |   |       c3ff8fdb3b_r000_c003.png
+|   |   |   |       c3ff8fdb3b_r001_c000.png
+|   |   |   |       c3ff8fdb3b_r001_c001.png
+|   |   |   |       c3ff8fdb3b_r001_c002.png
+|   |   |   |       c3ff8fdb3b_r001_c003.png
+|   |   |   |       c3ff8fdb3b_r002_c000.png
+|   |   |   |       c3ff8fdb3b_r002_c001.png
+|   |   |   |       c3ff8fdb3b_r002_c002.png
+|   |   |   |       c3ff8fdb3b_r002_c003.png
+|   |   |   |       c3ff8fdb3b_r003_c000.png
+|   |   |   |       c3ff8fdb3b_r003_c001.png
+|   |   |   |       c3ff8fdb3b_r003_c002.png
+|   |   |   |       c3ff8fdb3b_r003_c003.png
+|   |   |   |       
+|   |   |   +---Au sphere_0012_0645c40c71_resized
+|   |   |   |       0645c40c71_r000_c000.png
+|   |   |   |       0645c40c71_r000_c001.png
+|   |   |   |       0645c40c71_r000_c002.png
+|   |   |   |       0645c40c71_r000_c003.png
+|   |   |   |       0645c40c71_r001_c000.png
+|   |   |   |       0645c40c71_r001_c001.png
+|   |   |   |       0645c40c71_r001_c002.png
+|   |   |   |       0645c40c71_r001_c003.png
+|   |   |   |       0645c40c71_r002_c000.png
+|   |   |   |       0645c40c71_r002_c001.png
+|   |   |   |       0645c40c71_r002_c002.png
+|   |   |   |       0645c40c71_r002_c003.png
+|   |   |   |       0645c40c71_r003_c000.png
+|   |   |   |       0645c40c71_r003_c001.png
+|   |   |   |       0645c40c71_r003_c002.png
+|   |   |   |       0645c40c71_r003_c003.png
+|   |   |   |       Au sphere_0012_0645c40c71.png
+|   |   |   |       
+|   |   |   \---jpg
+|   |   |           1_9b53dee227.png
+|   |   |           2023-4-14 std mirkin rods_0063_5d72a93221.png
+|   |   |           2023-4-14 std mirkin rods_0064_8ffd0dff9f.png
+|   |   |           2023-4-14 std mirkin rods_0065_746f7bc4c0.png
+|   |   |           2023-4-14 std mirkin rods_0066_8da4b4f74f.png
+|   |   |           2023-4-14 std mirkin rods_0067_2d3b887d3e.png
+|   |   |           2023-4-14 std mirkin rods_0072_bc9c7acd34.png
+|   |   |           2023-4-14 std mirkin rods_0076_2edf66db67.png
+|   |   |           3_74429494f6.png
+|   |   |           Au rod A242-40k-1_6b812e5e8b.png
+|   |   |           Au rod A242-40k-2_e3ea773b68.png
+|   |   |           Au rod A242-40k-3_b97dac8b4a.png
+|   |   |           Au rod A301-10k_69ee863a23.png
+|   |   |           Au rod A301-6k-1_b362b50754.png
+|   |   |           Au rod A301-6k-2_f7f978ab5c.png
+|   |   |           Au rod A301-6k-3_8c3404b477.png
+|   |   |           Au rod A301-6k-6_48f2a4166f.png
+|   |   |           Au rod A389-40k-1_f03b1ba7ad.png
+|   |   |           Au rod A389-40k-3_78c4cbbc4e.png
+|   |   |           Au rod A389-40k-5_af0b6f5745.png
+|   |   |           Au rod A732-1_68c4735dc8.png
+|   |   |           Au rod A732-3_627dc55a55.png
+|   |   |           Au sphere_0001_2fd608d7a9.png
+|   |   |           Au sphere_0002_82124c3cda.png
+|   |   |           Au sphere_0003_08c6b26f78.png
+|   |   |           Au sphere_0004_bfd351e3bd.png
+|   |   |           Au sphere_0010_491c149b13.png
+|   |   |           Au sphere_0011_fc4f3b74d4.png
+|   |   |           Au sphere_0012_f43131ca0e.png
+|   |   |           Au sphere_0013_64cf084c28.png
+|   |   |           Au sphere_0014_51e076085c.png
+|   |   |           Au sphere_0015_1d0e2885f1.png
+|   |   |           
+|   |   +---Au sphere
+|   |   |   |   Au sphere A125-30k-7_bf6fb1ce9c_resized.png
+|   |   |   |   Au sphere A125-30k-9_73808e4d18_resized.png
+|   |   |   |   Au sphere A265-2-4k-1_94607ad48b_resized.png
+|   |   |   |   Au sphere A265-2-4k-2_8f3b8244c9_resized.png
+|   |   |   |   Au sphere A265-3-4k-1_d2c91228ce_resized.png
+|   |   |   |   Au sphere A265-3-4k-2_a47962a207_resized.png
+|   |   |   |   Au sphere A265-3-4k-3_c6be5691a6_resized.png
+|   |   |   |   Au sphere A357-6k-3_2901034e9b_resized.png
+|   |   |   |   image_registration.csv
+|   |   |   |   
+|   |   |   +---Au sphere
+|   |   |   |       451305651d_r000_c001.png
+|   |   |   |       451305651d_r000_c002.png
+|   |   |   |       451305651d_r001_c002.png
+|   |   |   |       451305651d_r002_c001.png
+|   |   |   |       451305651d_r002_c002.png
+|   |   |   |       451305651d_r003_c000.png
+|   |   |   |       451305651d_r003_c001.png
+|   |   |   |       451305651d_r003_c002.png
+|   |   |   |       6d27d323de_r000_c003.png
+|   |   |   |       6d27d323de_r001_c001.png
+|   |   |   |       6d27d323de_r001_c002.png
+|   |   |   |       6d27d323de_r002_c001.png
+|   |   |   |       6d27d323de_r003_c001.png
+|   |   |   |       a23f6c1718_r000_c001.png
+|   |   |   |       a23f6c1718_r001_c001.png
+|   |   |   |       a23f6c1718_r002_c001.png
+|   |   |   |       a23f6c1718_r002_c002.png
+|   |   |   |       a23f6c1718_r003_c002.png
+|   |   |   |       a23f6c1718_r003_c003.png
+|   |   |   |       Au sphere A125-30k-7_bf6fb1ce9c_resized.png
+|   |   |   |       Au sphere A125-30k-9_73808e4d18_resized.png
+|   |   |   |       Au sphere A265-2-4k-1_94607ad48b_resized.png
+|   |   |   |       Au sphere A265-2-4k-2_8f3b8244c9_resized.png
+|   |   |   |       Au sphere A265-3-4k-1_d2c91228ce_resized.png
+|   |   |   |       Au sphere A265-3-4k-2_a47962a207_resized.png
+|   |   |   |       Au sphere A265-3-4k-3_c6be5691a6_resized.png
+|   |   |   |       Au sphere A357-6k-3_2901034e9b_resized.png
+|   |   |   |       
+|   |   |   +---Au sphere A265-3-4k-4_a23f6c1718_resized
+|   |   |   |       a23f6c1718_r000_c000.png
+|   |   |   |       a23f6c1718_r000_c001.png
+|   |   |   |       a23f6c1718_r000_c002.png
+|   |   |   |       a23f6c1718_r000_c003.png
+|   |   |   |       a23f6c1718_r001_c000.png
+|   |   |   |       a23f6c1718_r001_c001.png
+|   |   |   |       a23f6c1718_r001_c002.png
+|   |   |   |       a23f6c1718_r001_c003.png
+|   |   |   |       a23f6c1718_r002_c000.png
+|   |   |   |       a23f6c1718_r002_c001.png
+|   |   |   |       a23f6c1718_r002_c002.png
+|   |   |   |       a23f6c1718_r002_c003.png
+|   |   |   |       a23f6c1718_r003_c000.png
+|   |   |   |       a23f6c1718_r003_c001.png
+|   |   |   |       a23f6c1718_r003_c002.png
+|   |   |   |       a23f6c1718_r003_c003.png
+|   |   |   |       
+|   |   |   +---Au sphere A314-3-20k-2_6d27d323de_resized
+|   |   |   |       6d27d323de_r000_c000.png
+|   |   |   |       6d27d323de_r000_c001.png
+|   |   |   |       6d27d323de_r000_c002.png
+|   |   |   |       6d27d323de_r000_c003.png
+|   |   |   |       6d27d323de_r001_c000.png
+|   |   |   |       6d27d323de_r001_c001.png
+|   |   |   |       6d27d323de_r001_c002.png
+|   |   |   |       6d27d323de_r001_c003.png
+|   |   |   |       6d27d323de_r002_c000.png
+|   |   |   |       6d27d323de_r002_c001.png
+|   |   |   |       6d27d323de_r002_c002.png
+|   |   |   |       6d27d323de_r002_c003.png
+|   |   |   |       6d27d323de_r003_c000.png
+|   |   |   |       6d27d323de_r003_c001.png
+|   |   |   |       6d27d323de_r003_c002.png
+|   |   |   |       6d27d323de_r003_c003.png
+|   |   |   |       
+|   |   |   \---Au spheres A190-6k-3_451305651d_resized
+|   |   |           451305651d_r000_c000.png
+|   |   |           451305651d_r000_c001.png
+|   |   |           451305651d_r000_c002.png
+|   |   |           451305651d_r000_c003.png
+|   |   |           451305651d_r001_c000.png
+|   |   |           451305651d_r001_c001.png
+|   |   |           451305651d_r001_c002.png
+|   |   |           451305651d_r001_c003.png
+|   |   |           451305651d_r002_c000.png
+|   |   |           451305651d_r002_c001.png
+|   |   |           451305651d_r002_c002.png
+|   |   |           451305651d_r002_c003.png
+|   |   |           451305651d_r003_c000.png
+|   |   |           451305651d_r003_c001.png
+|   |   |           451305651d_r003_c002.png
+|   |   |           451305651d_r003_c003.png
+|   |   |           
+|   |   +---Au_cube
+|   |   +---Au_rod
+|   |   \---Au_sphere
+|   +---datasets
+|   |   \---segmentation
+|   |       +---Au_cube_v001
+|   |       |   |   dataset_manifest.csv
+|   |       |   |   
+|   |       |   +---test
+|   |       |   |   +---images
+|   |       |   |   \---masks
+|   |       |   +---train
+|   |       |   |   +---images
+|   |       |   |   \---masks
+|   |       |   \---val
+|   |       |       +---images
+|   |       |       \---masks
+|   |       +---Au_rod_v001
+|   |       |   |   dataset_manifest.csv
+|   |       |   |   
+|   |       |   +---test
+|   |       |   |   +---images
+|   |       |   |   \---masks
+|   |       |   +---train
+|   |       |   |   +---images
+|   |       |   |   \---masks
+|   |       |   \---val
+|   |       |       +---images
+|   |       |       \---masks
+|   |       +---Au_sphere_v001
+|   |       |   |   dataset_manifest.csv
+|   |       |   |   
+|   |       |   +---test
+|   |       |   |   +---images
+|   |       |   |   \---masks
+|   |       |   +---train
+|   |       |   |   +---images
+|   |       |   |   \---masks
+|   |       |   \---val
+|   |       |       +---images
+|   |       |       \---masks
+|   |       \---mixed_nanostructures_v001
+|   |           |   dataset_manifest.csv
+|   |           |   
+|   |           +---test
+|   |           |   +---images
+|   |           |   \---masks
+|   |           +---train
+|   |           |   +---images
+|   |           |   \---masks
+|   |           \---val
+|   |               +---images
+|   |               \---masks
+|   +---external
+|   |   +---original
+|   |   |   +---images
+|   |   |   +---kaggle_nanostructure
+|   |   |   |   +---images
+|   |   |   |   +---masks
+|   |   |   |   \---metadata
+|   |   |   \---masks
+|   |   \---standardized
+|   |       +---images
+|   |       +---kaggle_nanostructure
+|   |       |   |   external_manifest.csv
+|   |       |   |   
+|   |       |   +---images
+|   |       |   \---masks
+|   |       \---masks
+|   +---image_mask_pairs
+|   |   \---Au cube
+|   +---masks
+|   |   +---cleaned
+|   |   |   +---Au_cube
+|   |   |   |   \---v001
+|   |   |   +---Au_rod
+|   |   |   |   \---v001
+|   |   |   \---Au_sphere
+|   |   |       \---v001
+|   |   \---generated
+|   |       +---Au_cube
+|   |       |   \---v001
+|   |       |       +---instance
+|   |       |       +---overlay
+|   |       |       \---semantic
+|   |       +---Au_rod
+|   |       |   \---v001
+|   |       |       +---instance
+|   |       |       +---overlay
+|   |       |       \---semantic
+|   |       \---Au_sphere
+|   |           \---v001
+|   |               +---instance
+|   |               +---overlay
+|   |               \---semantic
+|   +---metadata
+|   |       annotation_registry.csv
+|   |       cleaning_registry.csv
+|   |       conversion_registry.csv
+|   |       dataset_manifest.csv
+|   |       external_dataset_registry.csv
+|   |       image_registry.csv
+|   |       label_schema_v001.csv
+|   |       mask_registry.csv
+|   |       name_mapping_registry.csv
+|   |       
+|   +---raw
+|   |   +---Au cube
+|   |   |   |   0b152bdcf0.png
+|   |   |   |   0bdac96a0d.png
+|   |   |   |   0e9a804567.png
+|   |   |   |   1.dm3
+|   |   |   |   1.jpg
+|   |   |   |   2.dm3
+|   |   |   |   2.jpg
+|   |   |   |   3adb804706.png
+|   |   |   |   3b1d449968.png
+|   |   |   |   45f1c7df91.png
+|   |   |   |   79796021ca.png
+|   |   |   |   8c7b437e1f.png
+|   |   |   |   8d6da13424.png
+|   |   |   |   94ddf78e7d.png
+|   |   |   |   95f1e903fb.png
+|   |   |   |   a1ad693992.png
+|   |   |   |   Au cube A19-5k-1.dm4
+|   |   |   |   Au cube A19-5k-1.jpg
+|   |   |   |   Au cube A19-5k-2.dm4
+|   |   |   |   Au cube A19-5k-2.jpg
+|   |   |   |   Au cube A19-5k-3.dm4
+|   |   |   |   Au cube A19-5k-3.jpg
+|   |   |   |   Au cube A19-5k-7.dm4
+|   |   |   |   Au cube A19-5k-7.jpg
+|   |   |   |   Au cube A20-5k-1.dm4
+|   |   |   |   Au cube A20-5k-1.jpg
+|   |   |   |   Au cube A20-5k-2.dm4
+|   |   |   |   Au cube A20-5k-2.jpg
+|   |   |   |   Au cube A20-5k-4.dm4
+|   |   |   |   Au cube A20-5k-4.jpg
+|   |   |   |   Au cube A20-5k-6.dm4
+|   |   |   |   Au cube A20-5k-6.jpg
+|   |   |   |   Au cube A20-5k-7.dm4
+|   |   |   |   Au cube A20-5k-7.jpg
+|   |   |   |   Au cube A41-6k-1.dm4
+|   |   |   |   Au cube A41-6k-1.jpg
+|   |   |   |   Au cube A41-6k-2.dm4
+|   |   |   |   Au cube A41-6k-2.jpg
+|   |   |   |   Au cube A41-6k-3.dm4
+|   |   |   |   Au cube A41-6k-3.jpg
+|   |   |   |   Au cube A41-6k-4.dm4
+|   |   |   |   Au cube A41-6k-4.jpg
+|   |   |   |   Au cube A41-6k-5.dm4
+|   |   |   |   Au cube A41-6k-5.jpg
+|   |   |   |   Au cube A41-6k-6.dm4
+|   |   |   |   Au cube A41-6k-6.jpg
+|   |   |   |   Au cube A41-6k-7.dm4
+|   |   |   |   Au cube A41-6k-7.jpg
+|   |   |   |   Au cube A7-4k-3.dm4
+|   |   |   |   Au cube A7-4k-3.jpg
+|   |   |   |   Au cube A7-4k-4.dm4
+|   |   |   |   Au cube A7-4k-4.jpg
+|   |   |   |   Au cube A7-4k-5.dm4
+|   |   |   |   Au cube A7-4k-5.jpg
+|   |   |   |   Au cube A7-4k-6.dm4
+|   |   |   |   Au cube A7-4k-6.jpg
+|   |   |   |   Au cube-6k-4.dm4
+|   |   |   |   Au cube-6k-4.jpg
+|   |   |   |   d21b68e1be.png
+|   |   |   |   grains_044_ZC.jpg
+|   |   |   |   
+|   |   |   +---1_resized
+|   |   |   |       1153f0d5e0.png
+|   |   |   |       1333b351fb.png
+|   |   |   |       2034442531.png
+|   |   |   |       2ea55d2cb2.png
+|   |   |   |       34d0fb4753.png
+|   |   |   |       4063d30122.png
+|   |   |   |       41de4aeef1.png
+|   |   |   |       50b8eb34f3.png
+|   |   |   |       663de72f7a.png
+|   |   |   |       7265bc6d21.png
+|   |   |   |       8d7a895e65.png
+|   |   |   |       b08bf8779b.png
+|   |   |   |       b3b73b2ca8.png
+|   |   |   |       d04e45bd3d.png
+|   |   |   |       ea65e65935.png
+|   |   |   |       fa619f8ad7.png
+|   |   |   |       
+|   |   |   +---Au cube A19-5k-7_resized
+|   |   |   |       0ce9c92975.png
+|   |   |   |       21ee844804.png
+|   |   |   |       377bd52146.png
+|   |   |   |       46d97683ab.png
+|   |   |   |       501d7ffa8c.png
+|   |   |   |       5a08b54681.png
+|   |   |   |       6a0cc13208.png
+|   |   |   |       79d7740c71.png
+|   |   |   |       8f8cc3c7ff.png
+|   |   |   |       99c3a68493.png
+|   |   |   |       9e09fb095d.png
+|   |   |   |       ab5d7d750a.png
+|   |   |   |       d621becce9.png
+|   |   |   |       ddf633f82a.png
+|   |   |   |       e2e6ac3c44.png
+|   |   |   |       fb04a5ffb9.png
+|   |   |   |       
+|   |   |   +---Au cube A20-5k-4_resized
+|   |   |   |       0910cd1995.png
+|   |   |   |       0e5227db39.png
+|   |   |   |       23af5f8070.png
+|   |   |   |       2b958081ff.png
+|   |   |   |       3d1950c62a.png
+|   |   |   |       4a9e7a1e4a.png
+|   |   |   |       7b1a9dfc19.png
+|   |   |   |       864e8bf643.png
+|   |   |   |       8e8eaec9d6.png
+|   |   |   |       90160def55.png
+|   |   |   |       9c77cc8785.png
+|   |   |   |       b92da479e4.png
+|   |   |   |       c72eca1741.png
+|   |   |   |       c9a8f534bb.png
+|   |   |   |       d85f0a7aba.png
+|   |   |   |       dbb17c5cef.png
+|   |   |   |       
+|   |   |   +---Au cube A41-6k-3_resized
+|   |   |   |       017587e4a4.png
+|   |   |   |       0d8b2f9288.png
+|   |   |   |       22bfbb40ab.png
+|   |   |   |       2c40456fc0.png
+|   |   |   |       47e2b61c05.png
+|   |   |   |       606e67c5c5.png
+|   |   |   |       731128e195.png
+|   |   |   |       9328650889.png
+|   |   |   |       a23057b909.png
+|   |   |   |       c094563dc2.png
+|   |   |   |       c5261097b9.png
+|   |   |   |       cd9be4f042.png
+|   |   |   |       dca5d2bbd3.png
+|   |   |   |       df710fb4d5.png
+|   |   |   |       ea22efe9c9.png
+|   |   |   |       f9b11de3c6.png
+|   |   |   |       
+|   |   |   +---Au cube A41-6k-5_resized
+|   |   |   |       1555aee6d0.png
+|   |   |   |       23570b6385.png
+|   |   |   |       395882fd01.png
+|   |   |   |       3ab270cf59.png
+|   |   |   |       57aa795237.png
+|   |   |   |       6ccb5e4f05.png
+|   |   |   |       7cb06bb12e.png
+|   |   |   |       a6fb8be661.png
+|   |   |   |       a8cc1ebdf9.png
+|   |   |   |       b4b4c1f4ac.png
+|   |   |   |       b94711c7f4.png
+|   |   |   |       d25c45b9e7.png
+|   |   |   |       dd0ddebe40.png
+|   |   |   |       eb3f77b64c.png
+|   |   |   |       ee25d05f23.png
+|   |   |   |       f5280b79ef.png
+|   |   |   |       
+|   |   |   \---selected images
+|   |   |           017587e4a4.png
+|   |   |           2ea55d2cb2.png
+|   |   |           501d7ffa8c.png
+|   |   |           50b8eb34f3.png
+|   |   |           731128e195.png
+|   |   |           7b1a9dfc19.png
+|   |   |           864e8bf643.png
+|   |   |           8e8eaec9d6.png
+|   |   |           90160def55.png
+|   |   |           9c77cc8785.png
+|   |   |           a23057b909.png
+|   |   |           c9a8f534bb.png
+|   |   |           d04e45bd3d.png
+|   |   |           d621becce9.png
+|   |   |           dbb17c5cef.png
+|   |   |           ea65e65935.png
+|   |   |           fb04a5ffb9.png
+|   |   |           New Microsoft Excel Worksheet.xlsx
+|   |   |           
+|   |   +---Au rod
+|   |   |   |   1.dm3
+|   |   |   |   3.dm3
+|   |   |   |   Au rod A242-40k-1.dm3
+|   |   |   |   Au rod A242-40k-2.dm3
+|   |   |   |   Au rod A242-40k-3.dm3
+|   |   |   |   Au rod A301-10k.dm4
+|   |   |   |   Au rod A301-6k-1.dm4
+|   |   |   |   Au rod A301-6k-2.dm4
+|   |   |   |   Au rod A301-6k-3.dm4
+|   |   |   |   Au rod A301-6k-6.dm4
+|   |   |   |   Au rod A389-40k-1.dm3
+|   |   |   |   Au rod A389-40k-3.dm3
+|   |   |   |   Au rod A389-40k-5.dm3
+|   |   |   |   Au rod A732-1.dm3
+|   |   |   |   Au rod A732-3.dm3
+|   |   |   |   Au sphere_0001.dm4
+|   |   |   |   Au sphere_0002.dm4
+|   |   |   |   Au sphere_0003.dm4
+|   |   |   |   Au sphere_0004.dm4
+|   |   |   |   Au sphere_0010.dm4
+|   |   |   |   Au sphere_0011.dm4
+|   |   |   |   Au sphere_0012.dm4
+|   |   |   |   Au sphere_0013.dm4
+|   |   |   |   Au sphere_0014.dm4
+|   |   |   |   Au sphere_0015.dm4
+|   |   |   |   
+|   |   |   +---.ipynb_checkpoints
+|   |   |   |       Untitled-checkpoint.ipynb
+|   |   |   |       Untitled1-checkpoint.ipynb
+|   |   |   |       
+|   |   |   +---jpg
+|   |   |   |       1.jpg
+|   |   |   |       2023-4-14 std mirkin rods_0063.jpg
+|   |   |   |       2023-4-14 std mirkin rods_0064.jpg
+|   |   |   |       2023-4-14 std mirkin rods_0065.jpg
+|   |   |   |       2023-4-14 std mirkin rods_0066.jpg
+|   |   |   |       2023-4-14 std mirkin rods_0067.jpg
+|   |   |   |       2023-4-14 std mirkin rods_0072.jpg
+|   |   |   |       2023-4-14 std mirkin rods_0076.jpg
+|   |   |   |       3.jpg
+|   |   |   |       Au rod A242-40k-1.jpg
+|   |   |   |       Au rod A242-40k-2.jpg
+|   |   |   |       Au rod A242-40k-3.jpg
+|   |   |   |       Au rod A301-10k.jpg
+|   |   |   |       Au rod A301-6k-1.jpg
+|   |   |   |       Au rod A301-6k-2.jpg
+|   |   |   |       Au rod A301-6k-3.jpg
+|   |   |   |       Au rod A301-6k-6.jpg
+|   |   |   |       Au rod A389-40k-1.jpg
+|   |   |   |       Au rod A389-40k-3.jpg
+|   |   |   |       Au rod A389-40k-5.jpg
+|   |   |   |       Au rod A732-1.jpg
+|   |   |   |       Au rod A732-3.jpg
+|   |   |   |       Au sphere_0001.jpg
+|   |   |   |       Au sphere_0002.jpg
+|   |   |   |       Au sphere_0003.jpg
+|   |   |   |       Au sphere_0004.jpg
+|   |   |   |       Au sphere_0010.jpg
+|   |   |   |       Au sphere_0011.jpg
+|   |   |   |       Au sphere_0012.jpg
+|   |   |   |       Au sphere_0013.jpg
+|   |   |   |       Au sphere_0014.jpg
+|   |   |   |       Au sphere_0015.jpg
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           Image_Converter.cpython-311.pyc
+|   |   |           
+|   |   +---Au sphere
+|   |   |       Au sphere A125-30k-7.dm3
+|   |   |       Au sphere A125-30k-7.jpg
+|   |   |       Au sphere A125-30k-8.dm3
+|   |   |       Au sphere A125-30k-8.jpg
+|   |   |       Au sphere A125-30k-9.dm3
+|   |   |       Au sphere A125-30k-9.jpg
+|   |   |       Au sphere A265-1-4k-3.dm4
+|   |   |       Au sphere A265-1-4k-3.jpg
+|   |   |       Au sphere A265-2-4k-1.dm4
+|   |   |       Au sphere A265-2-4k-1.jpg
+|   |   |       Au sphere A265-2-4k-2.dm4
+|   |   |       Au sphere A265-2-4k-2.jpg
+|   |   |       Au sphere A265-3-4k-1.dm4
+|   |   |       Au sphere A265-3-4k-1.jpg
+|   |   |       Au sphere A265-3-4k-2.dm4
+|   |   |       Au sphere A265-3-4k-2.jpg
+|   |   |       Au sphere A265-3-4k-3.dm4
+|   |   |       Au sphere A265-3-4k-3.jpg
+|   |   |       Au sphere A265-3-4k-4.dm4
+|   |   |       Au sphere A265-3-4k-4.jpg
+|   |   |       Au sphere A314-1-20k-2.dm4
+|   |   |       Au sphere A314-1-20k-2.jpg
+|   |   |       Au sphere A314-1-20k-3.dm4
+|   |   |       Au sphere A314-1-20k-3.jpg
+|   |   |       Au sphere A314-1-20k-4.dm4
+|   |   |       Au sphere A314-1-20k-4.jpg
+|   |   |       Au sphere A314-3-20k-2.dm4
+|   |   |       Au sphere A314-3-20k-2.jpg
+|   |   |       Au sphere A357-6k-3.dm4
+|   |   |       Au sphere A357-6k-3.jpg
+|   |   |       Au spheres A190-6k-3.dm4
+|   |   |       Au spheres A190-6k-3.jpg
+|   |   |       
+|   |   +---Au-silica
+|   |   |       Au-SiO2 A135 in water-20k-1.dm3
+|   |   |       Au-SiO2 A135 in water-20k-1.jpg
+|   |   |       Au-SiO2 A135 in water-20k-3.dm3
+|   |   |       Au-SiO2 A135 in water-20k-3.jpg
+|   |   |       Au-SiO2 A135 in water-20k-4.dm3
+|   |   |       Au-SiO2 A135 in water-20k-4.jpg
+|   |   |       Au-SiO2 A135 in water-20k-5.dm3
+|   |   |       Au-SiO2 A135 in water-20k-5.jpg
+|   |   |       
+|   |   +---Au_cube
+|   |   +---Au_rod
+|   |   +---Au_silica
+|   |   +---Au_sphere
+|   |   +---Pd cube
+|   |   |       Lyu-Pd cube B1-100k-1.dm3
+|   |   |       Lyu-Pd cube B1-100k-1.jpg
+|   |   |       Lyu-Pd cube B1-100k-2.dm3
+|   |   |       Lyu-Pd cube B1-100k-2.jpg
+|   |   |       Lyu-Pd cube B1-100k-3.dm3
+|   |   |       Lyu-Pd cube B1-100k-3.jpg
+|   |   |       Lyu-Pd cube B1-100k-4.dm3
+|   |   |       Lyu-Pd cube B1-100k-4.jpg
+|   |   |       Pd cube B1-ethanol-15k-1.dm4
+|   |   |       Pd cube B1-ethanol-15k-1.jpg
+|   |   |       Pd cube B1-ethanol-15k-2.dm4
+|   |   |       Pd cube B1-ethanol-15k-2.jpg
+|   |   |       Pd cube B1-ethanol-15k-3.dm4
+|   |   |       Pd cube B1-ethanol-15k-3.jpg
+|   |   |       Pd cube B1-ethanol-15k-4.dm4
+|   |   |       Pd cube B1-ethanol-15k-4.jpg
+|   |   |       Pd cube B1-ethanol-15k-5.dm4
+|   |   |       Pd cube B1-ethanol-15k-5.jpg
+|   |   |       Pd cube B1-water-15k-1.dm4
+|   |   |       Pd cube B1-water-15k-1.jpg
+|   |   |       Pd cube B1-water-15k-2.dm4
+|   |   |       Pd cube B1-water-15k-2.jpg
+|   |   |       Pd cube B1-water-15k-3.dm4
+|   |   |       Pd cube B1-water-15k-3.jpg
+|   |   |       Pd cube B1-water-15k-4.dm4
+|   |   |       Pd cube B1-water-15k-4.jpg
+|   |   |       Pd cube B1-water-15k-5.dm4
+|   |   |       Pd cube B1-water-15k-5.jpg
+|   |   |       Pd cube B3-10k-1.dm4
+|   |   |       Pd cube B3-10k-1.jpg
+|   |   |       Pd cube B3-10k-2.dm4
+|   |   |       Pd cube B3-10k-2.jpg
+|   |   |       Pd cube B3-10k-3.dm4
+|   |   |       Pd cube B3-10k-3.jpg
+|   |   |       Pd cube B3-10k-4.dm4
+|   |   |       Pd cube B3-10k-4.jpg
+|   |   |       Pd cube B3-10k-5.dm4
+|   |   |       Pd cube B3-10k-5.jpg
+|   |   |       Pd cube B3-10k-6.dm4
+|   |   |       Pd cube B3-10k-6.jpg
+|   |   |       Pd cube B3-15k-1.dm4
+|   |   |       Pd cube B3-15k-1.jpg
+|   |   |       Pd cube B3-15k-2.dm4
+|   |   |       Pd cube B3-15k-2.jpg
+|   |   |       Pd cube B3-15k-3.dm4
+|   |   |       Pd cube B3-15k-3.jpg
+|   |   |       Pd cube B3-20k-1.dm4
+|   |   |       Pd cube B3-20k-1.jpg
+|   |   |       
+|   |   +---Pd-silica
+|   |   |       1-50k-1.dm3
+|   |   |       1-50k-1.jpg
+|   |   |       1-50k-2.dm3
+|   |   |       1-50k-2.jpg
+|   |   |       2-50k-1.dm3
+|   |   |       2-50k-1.jpg
+|   |   |       2-50k-2.dm3
+|   |   |       2-50k-2.jpg
+|   |   |       
+|   |   +---Pd_cube
+|   |   \---Pd_silica
+|   +---selected_4_annotations
+|   |   |   Au sphere.zip
+|   |   |   
+|   |   +---Au rod
+|   |   |       0645c40c71_r002_c002.png
+|   |   |       0645c40c71_r002_c003.png
+|   |   |       Au rod A242-40k-1_df3db2f91b.png
+|   |   |       Au rod A242-40k-3_a3588fcaf4.png
+|   |   |       Au rod A301-10k_89c0991ab9.png
+|   |   |       Au rod A301-6k-2_04b3650249.png
+|   |   |       Au rod A301-6k-3_2f41064b4d.png
+|   |   |       Au rod A389-40k-1_d4d8ab5399.png
+|   |   |       Au rod A389-40k-3_465884e609.png
+|   |   |       Au rod A389-40k-5_32ec7af313.png
+|   |   |       Au rod A732-1_57cad4bb07.png
+|   |   |       Au rod A732-3_5e3cff4825.png
+|   |   |       Au sphere_0001_89c46285c8.png
+|   |   |       Au sphere_0002_364291cfed.png
+|   |   |       Au sphere_0003_cbdb32b0e4.png
+|   |   |       Au sphere_0014_61e00159f5.png
+|   |   |       Au sphere_0015_ce40e727d5.png
+|   |   |       baad54fecc_r000_c001.png
+|   |   |       baad54fecc_r000_c002.png
+|   |   |       baad54fecc_r001_c001.png
+|   |   |       baad54fecc_r001_c003.png
+|   |   |       baad54fecc_r002_c000.png
+|   |   |       baad54fecc_r002_c003.png
+|   |   |       baad54fecc_r003_c002.png
+|   |   |       baad54fecc_r003_c003.png
+|   |   |       c3ff8fdb3b_r000_c003.png
+|   |   |       c3ff8fdb3b_r001_c000.png
+|   |   |       c3ff8fdb3b_r001_c001.png
+|   |   |       c3ff8fdb3b_r002_c003.png
+|   |   |       cfbb8fc3fc_r000_c001.png
+|   |   |       cfbb8fc3fc_r000_c002.png
+|   |   |       cfbb8fc3fc_r001_c002.png
+|   |   |       cfbb8fc3fc_r002_c001.png
+|   |   |       cfbb8fc3fc_r002_c002.png
+|   |   |       cfbb8fc3fc_r003_c002.png
+|   |   |       cfbb8fc3fc_r003_c003.png
+|   |   |       image_registration.csv
+|   |   |       image_registration_backup_20260521_183710.csv
+|   |   |       image_registration_backup_20260521_183725.csv
+|   |   |       
+|   |   \---Au sphere
+|   |           451305651d_r000_c001.png
+|   |           451305651d_r000_c002.png
+|   |           451305651d_r001_c002.png
+|   |           451305651d_r002_c001.png
+|   |           451305651d_r002_c002.png
+|   |           451305651d_r003_c000.png
+|   |           451305651d_r003_c001.png
+|   |           451305651d_r003_c002.png
+|   |           6d27d323de_r000_c003.png
+|   |           6d27d323de_r001_c001.png
+|   |           6d27d323de_r001_c002.png
+|   |           6d27d323de_r002_c001.png
+|   |           6d27d323de_r003_c001.png
+|   |           a23f6c1718_r000_c001.png
+|   |           a23f6c1718_r001_c001.png
+|   |           a23f6c1718_r002_c001.png
+|   |           a23f6c1718_r002_c002.png
+|   |           a23f6c1718_r003_c002.png
+|   |           a23f6c1718_r003_c003.png
+|   |           Au sphere A125-30k-7_bf6fb1ce9c_resized.png
+|   |           Au sphere A125-30k-9_73808e4d18_resized.png
+|   |           Au sphere A265-2-4k-1_94607ad48b_resized.png
+|   |           Au sphere A265-2-4k-2_8f3b8244c9_resized.png
+|   |           Au sphere A265-3-4k-1_d2c91228ce_resized.png
+|   |           Au sphere A265-3-4k-2_a47962a207_resized.png
+|   |           Au sphere A265-3-4k-3_c6be5691a6_resized.png
+|   |           Au sphere A357-6k-3_2901034e9b_resized.png
+|   |           image_registration.csv
+|   |           
+|   \---selected_for_annotation
+|       +---Au_cube
+|       |   \---v001
+|       |       \---images
+|       +---Au_rod
+|       |   \---v001
+|       |       \---images
+|       \---Au_sphere
+|           \---v001
+|               \---images
++---docs
+|       ImageConverter_Documentation.md
+|       project_overview.md
+|       
++---notebooks
+|   |   01_converted_image_Au_rod.ipynb
+|   |   02_converted_image_Au_sphere.ipynb
+|   |   03_annotation_and_mask_generation.ipynb
+|   |   
+|   \---archive_development
++---outputs
+|   +---figures
+|   +---model_outputs
+|   \---reports
++---scripts
+|       bootstrap_legacy_registration.py
+|       build_segmentation_dataset.py
+|       convert_images.py
+|       generate_masks_from_anylabeling.py
+|       update_registration_paths.py
+|       
++---src
+|   +---object_detection_segmentation
+|   |   |   annotation_converter.py
+|   |   |   dataset_builder.py
+|   |   |   image_converter.py
+|   |   |   mask_generator.py
+|   |   |   path_utils.py
+|   |   |   registry_utils.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           image_converter.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   \---object_detection_segmentation.egg-info
+|           dependency_links.txt
+|           PKG-INFO
+|           requires.txt
+|           SOURCES.txt
+|           top_level.txt
+|           
+\---tests
+    |   test_annotation_converter.py
+    |   test_image_converter.py
+    |   test_mask_generator.py
+    |   test_registry_utils.py
+    |   
+    +---test_images
+    |       1.dm3
+    |       3.dm3
+    |       Au rod A242-40k-1.dm3
+    |       Au rod A242-40k-2.dm3
+    |       Au rod A242-40k-3.dm3
+    |       Au rod A301-10k.dm4
+    |       Au rod A301-6k-1.dm4
+    |       Au rod A301-6k-2.dm4
+    |       Au rod A301-6k-3.dm4
+    |       Au rod A301-6k-6.dm4
+    |       Au rod A389-40k-1.dm3
+    |       Au rod A389-40k-3.dm3
+    |       Au rod A389-40k-5.dm3
+    |       Au rod A732-1.dm3
+    |       Au rod A732-3.dm3
+    |       Au sphere_0001.dm4
+    |       Au sphere_0002.dm4
+    |       Au sphere_0003.dm4
+    |       Au sphere_0004.dm4
+    |       Au sphere_0010.dm4
+    |       Au sphere_0011.dm4
+    |       Au sphere_0012.dm4
+    |       Au sphere_0013.dm4
+    |       Au sphere_0014.dm4
+    |       Au sphere_0015.dm4
+    |       
+    +---test_output_converter
+    |   +---collect_real_dm3
+    |   +---fake_single
+    |   |       fake_single_a12a0aa77a_resized.png
+    |   |       image_registration.csv
+    |   |       
+    |   +---keep_original_resolution
+    |   |   |   image_registration.csv
+    |   |   |   
+    |   |   \---patch_source_4aee8e74ba_resized
+    |   |           4aee8e74ba_r000_c000.png
+    |   |           4aee8e74ba_r000_c001.png
+    |   |           4aee8e74ba_r001_c000.png
+    |   |           4aee8e74ba_r001_c001.png
+    |   |           
+    |   +---manual_registration
+    |   |       image_registration.csv
+    |   |       
+    |   +---overwrite_no_to_all
+    |   |       image_registration.csv
+    |   |       skip_existing_898049f19f_resized.png
+    |   |       
+    |   +---overwrite_yes_to_all
+    |   |       image_registration.csv
+    |   |       stable_name_35ba796b14_resized.png
+    |   |       
+    |   \---real_dm3_single
+    |           1_9b75fdcdd2_resized.png
+    |           image_registration.csv
+    |           
+    \---__pycache__
+            test_image_converter.cpython-310.pyc
+            test_image_converter.cpython-312.pyc
+            test_image_converter.cpython-313.pyc
+            

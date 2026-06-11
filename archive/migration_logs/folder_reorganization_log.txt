@@ -1,0 +1,143 @@
+﻿Folder reorganization migration log
+
+================================================================================
+Run timestamp: 2026-06-11 11:09:40
+Project root: C:\work\Lyu\testing
+
+Planned move operations:
+MOVE FOLDER: C:\work\Lyu\testing\data\raw\converted_images -> C:\work\Lyu\testing\archive\old_outputs\converted_images_from_raw
+MOVE FOLDER: C:\work\Lyu\testing\data\raw\selected_images -> C:\work\Lyu\testing\archive\old_selected_images\selected_images_from_raw
+
+Created folders:
+C:\work\Lyu\testing\archive\migration_logs
+C:\work\Lyu\testing\archive\old_outputs
+C:\work\Lyu\testing\archive\old_selected_images
+C:\work\Lyu\testing\data\raw\Au_cube
+C:\work\Lyu\testing\data\raw\Au_rod
+C:\work\Lyu\testing\data\raw\Au_sphere
+C:\work\Lyu\testing\data\raw\Au_silica
+C:\work\Lyu\testing\data\raw\Pd_cube
+C:\work\Lyu\testing\data\raw\Pd_silica
+C:\work\Lyu\testing\data\converted_images\Au_cube
+C:\work\Lyu\testing\data\converted_images\Au_rod
+C:\work\Lyu\testing\data\converted_images\Au_sphere
+C:\work\Lyu\testing\data\selected_for_annotation\Au_cube\v001\images
+C:\work\Lyu\testing\data\selected_for_annotation\Au_rod\v001\images
+C:\work\Lyu\testing\data\selected_for_annotation\Au_sphere\v001\images
+C:\work\Lyu\testing\data\annotations\anylabeling\Au_cube\v001\json
+C:\work\Lyu\testing\data\annotations\anylabeling\Au_rod\v001\json
+C:\work\Lyu\testing\data\annotations\anylabeling\Au_sphere\v001\json
+C:\work\Lyu\testing\data\masks\generated\Au_cube\v001\instance
+C:\work\Lyu\testing\data\masks\generated\Au_cube\v001\semantic
+C:\work\Lyu\testing\data\masks\generated\Au_cube\v001\overlay
+C:\work\Lyu\testing\data\masks\generated\Au_rod\v001\instance
+C:\work\Lyu\testing\data\masks\generated\Au_rod\v001\semantic
+C:\work\Lyu\testing\data\masks\generated\Au_rod\v001\overlay
+C:\work\Lyu\testing\data\masks\generated\Au_sphere\v001\instance
+C:\work\Lyu\testing\data\masks\generated\Au_sphere\v001\semantic
+C:\work\Lyu\testing\data\masks\generated\Au_sphere\v001\overlay
+C:\work\Lyu\testing\data\masks\cleaned\Au_cube\v001
+C:\work\Lyu\testing\data\masks\cleaned\Au_rod\v001
+C:\work\Lyu\testing\data\masks\cleaned\Au_sphere\v001
+C:\work\Lyu\testing\data\cleaned\images\Au_cube\v001
+C:\work\Lyu\testing\data\cleaned\images\Au_rod\v001
+C:\work\Lyu\testing\data\cleaned\images\Au_sphere\v001
+C:\work\Lyu\testing\data\cleaned\masks\Au_cube\v001
+C:\work\Lyu\testing\data\cleaned\masks\Au_rod\v001
+C:\work\Lyu\testing\data\cleaned\masks\Au_sphere\v001
+C:\work\Lyu\testing\data\external\original\kaggle_nanostructure\images
+C:\work\Lyu\testing\data\external\original\kaggle_nanostructure\masks
+C:\work\Lyu\testing\data\external\original\kaggle_nanostructure\metadata
+C:\work\Lyu\testing\data\external\standardized\kaggle_nanostructure\images
+C:\work\Lyu\testing\data\external\standardized\kaggle_nanostructure\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_cube_v001\train\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_cube_v001\train\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_cube_v001\val\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_cube_v001\val\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_cube_v001\test\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_cube_v001\test\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_rod_v001\train\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_rod_v001\train\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_rod_v001\val\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_rod_v001\val\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_rod_v001\test\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_rod_v001\test\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_sphere_v001\train\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_sphere_v001\train\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_sphere_v001\val\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_sphere_v001\val\masks
+C:\work\Lyu\testing\data\datasets\segmentation\Au_sphere_v001\test\images
+C:\work\Lyu\testing\data\datasets\segmentation\Au_sphere_v001\test\masks
+C:\work\Lyu\testing\data\datasets\segmentation\mixed_nanostructures_v001\train\images
+C:\work\Lyu\testing\data\datasets\segmentation\mixed_nanostructures_v001\train\masks
+C:\work\Lyu\testing\data\datasets\segmentation\mixed_nanostructures_v001\val\images
+C:\work\Lyu\testing\data\datasets\segmentation\mixed_nanostructures_v001\val\masks
+C:\work\Lyu\testing\data\datasets\segmentation\mixed_nanostructures_v001\test\images
+C:\work\Lyu\testing\data\datasets\segmentation\mixed_nanostructures_v001\test\masks
+C:\work\Lyu\testing\data\metadata
+C:\work\Lyu\testing\notebooks\archive_development
+C:\work\Lyu\testing\outputs\figures
+C:\work\Lyu\testing\outputs\reports
+C:\work\Lyu\testing\outputs\model_outputs
+
+Created files:
+C:\work\Lyu\testing\archive\migration_logs\folder_reorganization_log.txt
+C:\work\Lyu\testing\src\object_detection_segmentation\dataset_builder.py
+C:\work\Lyu\testing\src\object_detection_segmentation\path_utils.py
+C:\work\Lyu\testing\src\object_detection_segmentation\annotation_converter.py
+C:\work\Lyu\testing\src\object_detection_segmentation\mask_generator.py
+C:\work\Lyu\testing\src\object_detection_segmentation\registry_utils.py
+C:\work\Lyu\testing\scripts\generate_masks_from_anylabeling.py
+C:\work\Lyu\testing\scripts\convert_images.py
+C:\work\Lyu\testing\scripts\bootstrap_legacy_registration.py
+C:\work\Lyu\testing\scripts\build_segmentation_dataset.py
+C:\work\Lyu\testing\scripts\update_registration_paths.py
+C:\work\Lyu\testing\tests\test_mask_generator.py
+C:\work\Lyu\testing\tests\test_registry_utils.py
+C:\work\Lyu\testing\tests\test_annotation_converter.py
+C:\work\Lyu\testing\notebooks\03_annotation_and_mask_generation.ipynb
+C:\work\Lyu\testing\README.md
+C:\work\Lyu\testing\docs\project_overview.md
+C:\work\Lyu\testing\data\metadata\cleaning_registry.csv
+C:\work\Lyu\testing\data\metadata\conversion_registry.csv
+C:\work\Lyu\testing\data\metadata\dataset_manifest.csv
+C:\work\Lyu\testing\data\metadata\image_registry.csv
+C:\work\Lyu\testing\data\metadata\external_dataset_registry.csv
+C:\work\Lyu\testing\data\metadata\annotation_registry.csv
+C:\work\Lyu\testing\data\metadata\label_schema_v001.csv
+C:\work\Lyu\testing\data\metadata\mask_registry.csv
+C:\work\Lyu\testing\data\metadata\name_mapping_registry.csv
+C:\work\Lyu\testing\data\datasets\segmentation\Au_cube_v001\dataset_manifest.csv
+C:\work\Lyu\testing\data\datasets\segmentation\Au_rod_v001\dataset_manifest.csv
+C:\work\Lyu\testing\data\datasets\segmentation\Au_sphere_v001\dataset_manifest.csv
+C:\work\Lyu\testing\data\datasets\segmentation\mixed_nanostructures_v001\dataset_manifest.csv
+C:\work\Lyu\testing\data\external\standardized\kaggle_nanostructure\external_manifest.csv
+C:\work\Lyu\testing\.gitignore
+C:\work\Lyu\testing\folder_hierarchy_after_reorganization.txt
+
+Updated files:
+C:\work\Lyu\testing\.gitignore
+
+Moved folders:
+C:\work\Lyu\testing\data\raw\converted_images -> C:\work\Lyu\testing\archive\old_outputs\converted_images_from_raw
+C:\work\Lyu\testing\data\raw\selected_images -> C:\work\Lyu\testing\archive\old_selected_images\selected_images_from_raw
+
+Moved files:
+
+
+Intentionally left unchanged:
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\selected_4_annotations
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\converted_images\Au rod
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\converted_images\Au sphere
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\raw\Au cube
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\raw\Au rod
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\raw\Au sphere
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\raw\Au-silica
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\raw\Pd cube
+Legacy path intentionally left unchanged to avoid breaking existing CSV/notebook paths: C:\work\Lyu\testing\data\raw\Pd-silica
+No notebooks were found under src/object_detection_segmentation.
+
+Warnings:
+Future selected annotation images should use data/selected_for_annotation; data/selected_4_annotations was kept as legacy.
+Legacy dataset folder names with spaces or hyphens were not renamed in this pass to avoid path breakage.
+Existing image_registration.csv files were not modified; run a separate reviewed path-repair step before renaming legacy dataset folders.

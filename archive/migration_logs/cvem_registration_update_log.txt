@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-06-11T15:35:06",
+  "root": "C:\\CVEM",
+  "method": "ImageConverter.update_registration_csv_for_selected_output_folder",
+  "results": [
+    {
+      "name": "legacy selected_images_from_raw",
+      "status": "updated",
+      "selected_folder": "C:\\CVEM\\archive\\old_selected_images\\selected_images_from_raw\\selected_images",
+      "master_csv_path": "C:\\CVEM\\archive\\old_outputs\\converted_images_from_raw\\Au rod\\image_registration.csv",
+      "output_csv": "C:\\CVEM\\archive\\old_selected_images\\selected_images_from_raw\\selected_images\\image_registration.csv",
+      "before": {
+        "path": "C:\\CVEM\\archive\\old_selected_images\\selected_images_from_raw\\selected_images\\image_registration.csv",
+        "exists": true,
+        "size": 17915,
+        "mtime": 1781039899.729406
+      },
+      "after": {
+        "path": "C:\\CVEM\\archive\\old_selected_images\\selected_images_from_raw\\selected_images\\image_registration.csv",
+        "exists": true,
+        "size": 7433,
+        "mtime": 1781206506.7813244
+      }
+    },
+    {
+      "name": "selected_4_annotations Au rod",
+      "status": "updated",
+      "selected_folder": "C:\\CVEM\\data\\selected_4_annotations\\Au rod",
+      "master_csv_path": "C:\\CVEM\\data\\converted_images\\Au rod\\image_registration.csv",
+      "output_csv": "C:\\CVEM\\data\\selected_4_annotations\\Au rod\\image_registration.csv",
+      "before": {
+        "path": "C:\\CVEM\\data\\selected_4_annotations\\Au rod\\image_registration.csv",
+        "exists": true,
+        "size": 15143,
+        "mtime": 1779403045.556062
+      },
+      "after": {
+        "path": "C:\\CVEM\\data\\selected_4_annotations\\Au rod\\image_registration.csv",
+        "exists": true,
+        "size": 14891,
+        "mtime": 1781206506.8396518
+      }
+    },
+    {
+      "name": "selected_4_annotations Au sphere",
+      "status": "updated",
+      "selected_folder": "C:\\CVEM\\data\\selected_4_annotations\\Au sphere",
+      "master_csv_path": "C:\\CVEM\\data\\converted_images\\Au sphere\\image_registration.csv",
+      "output_csv": "C:\\CVEM\\data\\selected_4_annotations\\Au sphere\\image_registration.csv",
+      "before": {
+        "path": "C:\\CVEM\\data\\selected_4_annotations\\Au sphere\\image_registration.csv",
+        "exists": true,
+        "size": 12750,
+        "mtime": 1779583132.3361444
+      },
+      "after": {
+        "path": "C:\\CVEM\\data\\selected_4_annotations\\Au sphere\\image_registration.csv",
+        "exists": true,
+        "size": 12561,
+        "mtime": 1781206506.9272513
+      }
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\archive\\old_outputs\\converted_images_from_raw\\Au rod\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\data\\converted_images\\Au rod\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\data\\converted_images\\Au sphere\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\tests\\test_output_converter\\fake_single\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\tests\\test_output_converter\\keep_original_resolution\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\tests\\test_output_converter\\manual_registration\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\tests\\test_output_converter\\overwrite_no_to_all\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\tests\\test_output_converter\\overwrite_yes_to_all\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    },
+    {
+      "name": "existing image_registration.csv",
+      "status": "not_attempted",
+      "output_csv": "C:\\CVEM\\tests\\test_output_converter\\real_dm3_single\\image_registration.csv",
+      "reason": "No unambiguous selected-output master CSV mapping was inferred, or this file appears to be a master/test registration CSV."
+    }
+  ]
+}

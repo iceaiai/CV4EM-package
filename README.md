@@ -1,28 +1,5 @@
-# CV4EM
+﻿# Object Detection and Segmentation for Nanostructures
 
-This is the repository for a library with integrated modules developed by the **CV4EM team**.
+This project organizes microscopy image conversion, annotation, mask generation, cleaning, external dataset standardization, and model-ready segmentation dataset preparation.
 
----
-
-## Prerequisites
-
-Make sure you have the following libraries installed:
-
-- `pandas`
-- `numpy`
-- `hyperspy`
-- `exspy`
-
-You can install these dependencies using pip:
-
-```bash
-pip install pandas numpy hyperspy exspy
-
-### Notes
-
-- The `data/` directory includes core modules like `K_factor.py` and `Periodical_table.py`.
-- The `module/` directory is for application-specific modules (add your custom modules here).
-- The `utils/` directory contains helper functions and utilities.
-- The top-level `__init__.py` initializes the `CV4EM` package, enabling imports like `from CV4EM import ...`.
-
----
+See docs/project_overview.md for the data lifecycle and folder conventions.

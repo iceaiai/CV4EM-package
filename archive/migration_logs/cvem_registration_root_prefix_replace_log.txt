@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-06-11T15:38:46",
+  "root": "C:\\CVEM",
+  "operation": "structured CSV root-prefix replacement",
+  "old_root_pattern": "c:[\\\\/]+work[\\\\/]+lyu[\\\\/]+testing",
+  "new_root": "C:\\CVEM",
+  "total_image_registration_csv": 12,
+  "total_old_root_refs_after": 0,
+  "results": [
+    {
+      "status": "updated",
+      "csv_path": "C:\\CVEM\\archive\\old_outputs\\converted_images_from_raw\\Au rod\\image_registration.csv",
+      "backup_path": "C:\\CVEM\\archive\\old_outputs\\converted_images_from_raw\\Au rod\\image_registration_root_prefix_backup_20260611_153845.csv",
+      "old_root_refs_before": 50,
+      "old_root_refs_after": 0,
+      "replacements": 50
+    },
+    {
+      "status": "unchanged",
+      "csv_path": "C:\\CVEM\\archive\\old_selected_images\\selected_images_from_raw\\selected_images\\image_registration.csv",
+      "old_root_refs_before": 0,
+      "old_root_refs_after": 0,
+      "replacements": 0
+    },
+    {
+      "status": "updated",
+      "csv_path": "C:\\CVEM\\data\\converted_images\\Au rod\\image_registration.csv",
+      "backup_path": "C:\\CVEM\\data\\converted_images\\Au rod\\image_registration_root_prefix_backup_20260611_153845.csv",
+      "old_root_refs_before": 363,
+      "old_root_refs_after": 0,
+      "replacements": 363
+    },
+    {
+      "status": "updated",
+      "csv_path": "C:\\CVEM\\data\\converted_images\\Au sphere\\image_registration.csv",
+      "backup_path": "C:\\CVEM\\data\\converted_images\\Au sphere\\image_registration_root_prefix_backup_20260611_153845.csv",
+      "old_root_refs_before": 168,
+      "old_root_refs_after": 0,
+      "replacements": 168
+    },
+    {
+      "status": "updated",
+      "csv_path": "C:\\CVEM\\data\\selected_4_annotations\\Au rod\\image_registration.csv",
+      "backup_path": "C:\\CVEM\\data\\selected_4_annotations\\Au rod\\image_registration_root_prefix_backup_20260611_153845.csv",
+      "old_root_refs_before": 72,
+      "old_root_refs_after": 0,
+      "replacements": 72
+    },
+    {
+      "status": "updated",
+      "csv_path": "C:\\CVEM\\data\\selected_4_annotations\\Au sphere\\image_registration.csv",
+      "backup_path": "C:\\CVEM\\data\\selected_4_annotations\\Au sphere\\image_registration_root_prefix_backup_20260611_153845.csv",
+      "old_root_refs_before": 54,
+      "old_root_refs_after": 0,
+      "replacements": 54
+    },
+    {
+      "status": "unchanged",
+      "csv_path": "C:\\CVEM\\tests\\test_output_converter\\fake_single\\image_registration.csv",
+      "old_root_refs_before": 0,
+      "old_root_refs_after": 0,
+      "replacements": 0
+    },
+    {
+      "status": "unchanged",
+      "csv_path": "C:\\CVEM\\tests\\test_output_converter\\keep_original_resolution\\image_registration.csv",
+      "old_root_refs_before": 0,
+      "old_root_refs_after": 0,
+      "replacements": 0
+    },
+    {
+      "status": "unchanged",
+      "csv_path": "C:\\CVEM\\tests\\test_output_converter\\manual_registration\\image_registration.csv",
+      "old_root_refs_before": 0,
+      "old_root_refs_after": 0,
+      "replacements": 0
+    },
+    {
+      "status": "unchanged",
+      "csv_path": "C:\\CVEM\\tests\\test_output_converter\\overwrite_no_to_all\\image_registration.csv",
+      "old_root_refs_before": 0,
+      "old_root_refs_after": 0,
+      "replacements": 0
+    },
+    {
+      "status": "unchanged",
+      "csv_path": "C:\\CVEM\\tests\\test_output_converter\\overwrite_yes_to_all\\image_registration.csv",
+      "old_root_refs_before": 0,
+      "old_root_refs_after": 0,
+      "replacements": 0
+    },
+    {
+      "status": "unchanged",
+      "csv_path": "C:\\CVEM\\tests\\test_output_converter\\real_dm3_single\\image_registration.csv",
+      "old_root_refs_before": 0,
+      "old_root_refs_after": 0,
+      "replacements": 0
+    }
+  ]
+}
