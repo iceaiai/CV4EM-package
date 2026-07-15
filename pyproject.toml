@@ -11,10 +11,6 @@ dependencies = [
     "numpy",
     "pillow",
     "hyperspy",
-    "scikit-image",
-    "matplotlib",
-    "pandas",
-    "opencv-python",
 ]
 
 [tool.setuptools.packages.find]
