@@ -10,11 +10,19 @@ __pycache__/
 Thumbs.db
 outputs/
 archive/migration_logs/*.tmp
-*.dm3
-*.dm4
 
 # Large data folders may be ignored later after confirming data storage policy.
 # Do not ignore all data/ automatically until that is confirmed.
 # data/raw/
 # data/converted_images/
 # data/datasets/
+
+*.dm3
+*.dm4
+*Threshold*SAM3*.ipynb
+
+.vscode/
+**/.vscode/
+*.dm3
+*.dm4
+*Threshold*SAM3*.ipynb

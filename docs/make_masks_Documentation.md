@@ -44,7 +44,7 @@ COCO annotations store each object independently, so overlapping objects remain 
 ```python
 import numpy as np
 
-from make_masks_simplified import MakeMasks
+from make_masks import MakeMasks
 ```
 
 Rename the import module if your Python file uses a different filename.
@@ -547,6 +547,53 @@ print(
 print("Categories:", coco_dataset["categories"])
 ```
 
+### Example: Convert All JSON Files into a `coco` Folder
+
+The following example reads every JSON file directly inside `annotations_dir`, combines all annotations into one COCO dataset, creates a `coco` folder, and saves the result as `coco_annotations.json`.
+
+```python
+from pathlib import Path
+
+from make_masks import MakeMasks
+
+
+annotations_dir = Path(r"C:\data\annotations")
+output_dir = Path(r"C:\data\outputs")
+coco_dir = output_dir / "coco"
+
+coco_dir.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+mask_maker = MakeMasks(
+    input_dir=annotations_dir,
+    output_dir=output_dir,
+    default_image_shape=(512, 512),
+)
+
+coco_dataset = mask_maker.save_all_as_coco(
+    image_shape=(512, 512),
+    category_name="nanostructure",
+    category_id=1,
+    image_extension=".png",
+    circle_points=36,
+    save_path=coco_dir / "coco_annotations.json",
+)
+
+print("COCO file:", coco_dir / "coco_annotations.json")
+print("Number of images:", len(coco_dataset["images"]))
+print("Number of annotations:", len(coco_dataset["annotations"]))
+```
+
+The output folder structure will be:
+
+```text
+C:\data\outputs
+└── coco
+    └── coco_annotations.json
+```
+
 ### Example: Use the Default Save Path
 
 ```python
@@ -560,7 +607,7 @@ coco_dataset = mask_maker.save_all_as_coco()
 ## Workflow 1: Convert All JSON Files to Instance Masks
 
 ```python
-from make_masks_simplified import MakeMasks
+from make_masks import MakeMasks
 
 
 mask_maker = MakeMasks(
@@ -585,7 +632,7 @@ print(saved_files)
 ```python
 import numpy as np
 
-from make_masks_simplified import MakeMasks
+from make_masks import MakeMasks
 
 
 mask_maker = MakeMasks(
@@ -619,7 +666,7 @@ mask_maker.save_mask(
 ## Workflow 3: Build One COCO Dataset from All JSON Files
 
 ```python
-from make_masks_simplified import MakeMasks
+from make_masks import MakeMasks
 
 
 mask_maker = MakeMasks(
